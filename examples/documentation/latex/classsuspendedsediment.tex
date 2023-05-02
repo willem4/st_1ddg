@@ -1,0 +1,99 @@
+\section{suspendedsediment Class Reference}
+\label{classsuspendedsediment}\index{suspendedsediment@{suspendedsediment}}
+
+
+{\ttfamily \#include $<$flux.\-h$>$}
+
+Inheritance diagram for suspendedsediment\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsuspendedsediment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf eval} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Evaluation of the H\-L\-L\-C flux with topography correction. \end{DoxyCompactList}\item 
+void {\bf eval\-\_\-l} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Non conservative flux as suggested by Bouchut et al. (2004). \end{DoxyCompactList}\item 
+void {\bf eval\-\_\-r} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Non conservative flux as suggested by Bouchut et al. (2004). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{suspendedsediment@{suspendedsediment}!eval@{eval}}
+\index{eval@{eval}!suspendedsediment@{suspendedsediment}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}double suspendedsediment\-::eval (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{F, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsuspendedsediment_a26e0411516045d46bc504acc7407797e}
+
+
+Evaluation of the H\-L\-L\-C flux with topography correction. 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_ab41e8752c750488dbcbc8ef24e277110}.
+
+
+
+References gravity\-\_\-const, and element\-::systemsize1.
+
+\index{suspendedsediment@{suspendedsediment}!eval\-\_\-l@{eval\-\_\-l}}
+\index{eval\-\_\-l@{eval\-\_\-l}!suspendedsediment@{suspendedsediment}}
+\subsubsection[{eval\-\_\-l}]{\setlength{\rightskip}{0pt plus 5cm}void suspendedsediment\-::eval\-\_\-l (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{Fl, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsuspendedsediment_af4d3a3daf5a292a36b438512704d4098}
+
+
+Non conservative flux as suggested by Bouchut et al. (2004). 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_a184e5d5629191871c6dd9cd6b4e82799}.
+
+
+
+References gravity\-\_\-const, and element\-::systemsize1.
+
+\index{suspendedsediment@{suspendedsediment}!eval\-\_\-r@{eval\-\_\-r}}
+\index{eval\-\_\-r@{eval\-\_\-r}!suspendedsediment@{suspendedsediment}}
+\subsubsection[{eval\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}void suspendedsediment\-::eval\-\_\-r (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{Fr, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsuspendedsediment_a232c9be4aad28973ade9e46222489035}
+
+
+Non conservative flux as suggested by Bouchut et al. (2004). 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_ab5e6afaa22aff4a1bbbce0bba561fed3}.
+
+
+
+References gravity\-\_\-const, and element\-::systemsize1.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf flux.\-h}\item 
+{\bf flux.\-cpp}\end{DoxyCompactItemize}

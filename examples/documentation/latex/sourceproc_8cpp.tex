@@ -1,0 +1,39 @@
+\section{sourceproc.\-cpp File Reference}
+\label{sourceproc_8cpp}\index{sourceproc.\-cpp@{sourceproc.\-cpp}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}state.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}element.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}source.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sourceproc.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf sourceproc} (vector$<$ {\bf node} $>$ Nodes, vector$<$ {\bf element} $>$ \&Elements, {\bf sourcebase} $\ast$sourcetype)
+\begin{DoxyCompactList}\small\item\em Function which calculates the source for the complete system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sourceproc.\-cpp@{sourceproc.\-cpp}!sourceproc@{sourceproc}}
+\index{sourceproc@{sourceproc}!sourceproc.cpp@{sourceproc.\-cpp}}
+\subsubsection[{sourceproc}]{\setlength{\rightskip}{0pt plus 5cm}int sourceproc (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf node} $>$}]{Nodes, }
+\item[{vector$<$ {\bf element} $>$ \&}]{Elements, }
+\item[{{\bf sourcebase} $\ast$}]{sourcetype}
+\end{DoxyParamCaption}
+)}\label{sourceproc_8cpp_aa66b32da3a32d57197f4a01dcfba828b}
+
+
+Function which calculates the source for the complete system. 
+
+
+
+References element\-::ep, sourcebase\-::eval(), state\-::statesize, and element\-::systemsize1.
+
+
+
+Referenced by cranknicolsonwp(), eulerforw(), and rk3().
+

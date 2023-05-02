@@ -1,0 +1,63 @@
+\section{updatenodes.\-cpp File Reference}
+\label{updatenodes_8cpp}\index{updatenodes.\-cpp@{updatenodes.\-cpp}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}state.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}element.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flux.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}testfcn.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}updatenodes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}enumtypes.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf updatenodesu} (vector$<$ {\bf node} $>$ \&Nodes, vector$<$ {\bf element} $>$ \&Elements, int bcl, int bcr, {\bf testtypedescr} testtype, double t)
+\item 
+int {\bf updatenodesq} (vector$<$ {\bf node} $>$ \&Nodes, vector$<$ {\bf element} $>$ \&Elements, int bcl, int bcr, {\bf testtypedescr} testtype, double t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{updatenodes.\-cpp@{updatenodes.\-cpp}!updatenodesq@{updatenodesq}}
+\index{updatenodesq@{updatenodesq}!updatenodes.cpp@{updatenodes.\-cpp}}
+\subsubsection[{updatenodesq}]{\setlength{\rightskip}{0pt plus 5cm}int updatenodesq (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf node} $>$ \&}]{Nodes, }
+\item[{vector$<$ {\bf element} $>$ \&}]{Elements, }
+\item[{int}]{bcl, }
+\item[{int}]{bcr, }
+\item[{{\bf testtypedescr}}]{testtype, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)}\label{updatenodes_8cpp_aa625f6fcfda47789da934d1c92f36680}
+
+
+References S\-W\-E\-Flow\-Over\-Siny\-Bed\-I, element\-::systemsize2, and testfcn().
+
+
+
+Referenced by fluxproc().
+
+\index{updatenodes.\-cpp@{updatenodes.\-cpp}!updatenodesu@{updatenodesu}}
+\index{updatenodesu@{updatenodesu}!updatenodes.cpp@{updatenodes.\-cpp}}
+\subsubsection[{updatenodesu}]{\setlength{\rightskip}{0pt plus 5cm}int updatenodesu (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf node} $>$ \&}]{Nodes, }
+\item[{vector$<$ {\bf element} $>$ \&}]{Elements, }
+\item[{int}]{bcl, }
+\item[{int}]{bcr, }
+\item[{{\bf testtypedescr}}]{testtype, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)}\label{updatenodes_8cpp_a2b504d63421860262db54e7b637303ca}
+Update interpolation points in the Element. 
+
+References element\-::systemsize1, and testfcn().
+
+
+
+Referenced by flux2proc().
+

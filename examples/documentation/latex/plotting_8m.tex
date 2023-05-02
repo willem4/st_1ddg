@@ -1,0 +1,252 @@
+\section{plotting.\-m File Reference}
+\label{plotting_8m}\index{plotting.\-m@{plotting.\-m}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf fscanf} ({\bf fid},'\%u',[1 1])
+\item 
+It has two rows now {\bf fclose} ({\bf fid})
+\item 
+It has two rows now {\bf a} (2,\-:)
+\item 
+{\bf figure} (1)\%{\bf plot}({\bf b}(1
+\item 
+{\bf b} (2,\-:)
+\item 
+{\bf b\-\_\-new} (2,({\bf ii}-\/1)$\ast${\bf gg}+({\bf jj})$\ast$2+1)
+\item 
+end {\bf b\-\_\-new} (2,({\bf ii}-\/1)$\ast${\bf gg}+2 $\ast${\bf gg})
+\item 
+{\bf plot} ({\bf a}(1,({\bf jj}-\/1)$\ast${\bf Nn}+1\-:{\bf jj} $\ast${\bf Nn}), {\bf a}(2,({\bf jj}-\/1)$\ast${\bf Nn}+1\-:{\bf jj} $\ast${\bf Nn}),'g-\/')
+\item 
+{\bf subplot} (M1, 1, {\bf jj}) {\bf plot}({\bf b}(1
+\item 
+{\bf plot} ({\bf a}(1,({\bf jj}+{\bf M1a}-\/1)$\ast${\bf Nn}+1\-:({\bf jj}+{\bf M1a})$\ast${\bf Nn}), {\bf a}(2,({\bf jj}+{\bf M1a}-\/1)$\ast${\bf Nn}+1\-:({\bf jj}+{\bf M1a})$\ast${\bf Nn}),'g-\/')
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf clear}
+\item 
+{\bf fid} = fopen('init.\-160')
+\item 
+{\bf Ma} ={\bf fscanf}({\bf fid},'\%u',[2 1])
+\item 
+{\bf M1a} = {\bf Ma}(1)
+\item 
+{\bf M2a} = {\bf Ma}(2)
+\item 
+{\bf Nn} = {\bf fscanf}({\bf fid},'\%u',[1 1])
+\item 
+{\bf a} = {\bf fscanf}({\bf fid},'\%g \%g',[2 inf])
+\item 
+{\bf ext} = [160]
+\item 
+for {\bf kk}
+\item 
+{\bf Mb} ={\bf fscanf}({\bf fid},'\%u',[2 1])
+\item 
+{\bf M1b} = {\bf Mb}(1)
+\item 
+{\bf M2b} = {\bf Mb}(2)
+\item 
+{\bf Nnb} = {\bf fscanf}({\bf fid},'\%u',[1 1])
+\item 
+{\bf clear} {\bf b} = {\bf fscanf}({\bf fid},'\%g \%g',[2 inf])
+\item 
+B needs to be extended to the \\*
+same length as {\bf a} {\bf gg} = {\bf Nn}/{\bf Nnb}
+\item 
+{\bf b\-\_\-new} = {\bf a}
+\item 
+{\bf \-\_\-\-\_\-pad0\-\_\-\-\_\-}
+\item 
+for {\bf ii}
+\item 
+for {\bf jj}
+\item 
+hold {\bf on}
+\item 
+hold {\bf off}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{plotting.\-m@{plotting.\-m}!a@{a}}
+\index{a@{a}!plotting.m@{plotting.\-m}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}It has two rows now a (
+\begin{DoxyParamCaption}
+\item[{2}]{, }
+\item[{\-:}]{}
+\end{DoxyParamCaption}
+)}\label{plotting_8m_a1d87f800f12020b8edb0edab427405dc}
+\index{plotting.\-m@{plotting.\-m}!b@{b}}
+\index{b@{b}!plotting.m@{plotting.\-m}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}b (
+\begin{DoxyParamCaption}
+\item[{2}]{, }
+\item[{\-:}]{}
+\end{DoxyParamCaption}
+)}\label{plotting_8m_a8b3f14997b3846410bdbc82ec506dc43}
+\index{plotting.\-m@{plotting.\-m}!b\-\_\-new@{b\-\_\-new}}
+\index{b\-\_\-new@{b\-\_\-new}!plotting.m@{plotting.\-m}}
+\subsubsection[{b\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}b\-\_\-new (
+\begin{DoxyParamCaption}
+\item[{2}]{, }
+\item[{({\bf ii}-\/1)$\ast${\bf gg}+({\bf jj})$\ast$2+}]{1}
+\end{DoxyParamCaption}
+)}\label{plotting_8m_a93c5075229044c34b20ec3aca280e45d}
+\index{plotting.\-m@{plotting.\-m}!b\-\_\-new@{b\-\_\-new}}
+\index{b\-\_\-new@{b\-\_\-new}!plotting.m@{plotting.\-m}}
+\subsubsection[{b\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}end b\-\_\-new (
+\begin{DoxyParamCaption}
+\item[{2}]{, }
+\item[{({\bf ii}-\/1)$\ast${\bf gg}+2 $\ast$}]{gg}
+\end{DoxyParamCaption}
+)}\label{plotting_8m_a0b456f74bef06ca99e35581270590d0f}
+\index{plotting.\-m@{plotting.\-m}!fclose@{fclose}}
+\index{fclose@{fclose}!plotting.m@{plotting.\-m}}
+\subsubsection[{fclose}]{\setlength{\rightskip}{0pt plus 5cm}It has two rows now fclose (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{}
+\end{DoxyParamCaption}
+)}\label{plotting_8m_af06dc73a4bdd505f3f80000d97ac7b6b}
+\index{plotting.\-m@{plotting.\-m}!figure@{figure}}
+\index{figure@{figure}!plotting.m@{plotting.\-m}}
+\subsubsection[{figure}]{\setlength{\rightskip}{0pt plus 5cm}figure (
+\begin{DoxyParamCaption}
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}\label{plotting_8m_a2a231dd7596be25a520e52a1f54be99d}
+\index{plotting.\-m@{plotting.\-m}!fscanf@{fscanf}}
+\index{fscanf@{fscanf}!plotting.m@{plotting.\-m}}
+\subsubsection[{fscanf}]{\setlength{\rightskip}{0pt plus 5cm}fscanf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'\%u'}]{}
+\end{DoxyParamCaption}
+)}\label{plotting_8m_ae7cc613ddee30a4d58f9a50f3dbeda22}
+\index{plotting.\-m@{plotting.\-m}!plot@{plot}}
+\index{plot@{plot}!plotting.m@{plotting.\-m}}
+\subsubsection[{plot}]{\setlength{\rightskip}{0pt plus 5cm}plot (
+\begin{DoxyParamCaption}
+\item[{{\bf a}(1,({\bf jj}-\/1)$\ast${\bf Nn}+1\-:{\bf jj} $\ast${\bf Nn})}]{, }
+\item[{{\bf a}(2,({\bf jj}-\/1)$\ast${\bf Nn}+1\-:{\bf jj} $\ast${\bf Nn})}]{, }
+\item[{'g-\/'}]{}
+\end{DoxyParamCaption}
+)}\label{plotting_8m_adc215e714beb1ab1d76d593619c76a9a}
+\index{plotting.\-m@{plotting.\-m}!plot@{plot}}
+\index{plot@{plot}!plotting.m@{plotting.\-m}}
+\subsubsection[{plot}]{\setlength{\rightskip}{0pt plus 5cm}plot (
+\begin{DoxyParamCaption}
+\item[{{\bf a}(1,({\bf jj}+{\bf M1a}-\/1)$\ast${\bf Nn}+1\-:({\bf jj}+{\bf M1a})$\ast${\bf Nn})}]{, }
+\item[{{\bf a}(2,({\bf jj}+{\bf M1a}-\/1)$\ast${\bf Nn}+1\-:({\bf jj}+{\bf M1a})$\ast${\bf Nn})}]{, }
+\item[{'g-\/'}]{}
+\end{DoxyParamCaption}
+)}\label{plotting_8m_a1fd25b9691022fa69cd85230077a841d}
+\index{plotting.\-m@{plotting.\-m}!subplot@{subplot}}
+\index{subplot@{subplot}!plotting.m@{plotting.\-m}}
+\subsubsection[{subplot}]{\setlength{\rightskip}{0pt plus 5cm}subplot (
+\begin{DoxyParamCaption}
+\item[{M1}]{, }
+\item[{1}]{, }
+\item[{{\bf jj}}]{}
+\end{DoxyParamCaption}
+)}\label{plotting_8m_ae65597c012d2e7ada5d767b35666ae51}
+
+
+\subsection{Variable Documentation}
+\index{plotting.\-m@{plotting.\-m}!\-\_\-\-\_\-pad0\-\_\-\-\_\-@{\-\_\-\-\_\-pad0\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-pad0\-\_\-\-\_\-@{\-\_\-\-\_\-pad0\-\_\-\-\_\-}!plotting.m@{plotting.\-m}}
+\subsubsection[{\-\_\-\-\_\-pad0\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-pad0\-\_\-\-\_\-}\label{plotting_8m_ab6f3c269fc46c9c1c0f81b3431240138}
+\index{plotting.\-m@{plotting.\-m}!a@{a}}
+\index{a@{a}!plotting.m@{plotting.\-m}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}a = {\bf fscanf}({\bf fid},'\%g \%g',[2 inf])}\label{plotting_8m_a4124bc0a9335c27f086f24ba207a4912}
+
+
+Referenced by advection\-::eval(), initcon(), and readmesh().
+
+\index{plotting.\-m@{plotting.\-m}!b@{b}}
+\index{b@{b}!plotting.m@{plotting.\-m}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}end b = {\bf fscanf}({\bf fid},'\%g \%g',[2 inf])}\label{plotting_8m_a8ac21ba61610615e835ec4217ecca3d2}
+
+
+Referenced by initcon().
+
+\index{plotting.\-m@{plotting.\-m}!b\-\_\-new@{b\-\_\-new}}
+\index{b\-\_\-new@{b\-\_\-new}!plotting.m@{plotting.\-m}}
+\subsubsection[{b\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}b\-\_\-new = {\bf a}}\label{plotting_8m_a304d5c0395f3d90bda1d3588a7df77ca}
+\index{plotting.\-m@{plotting.\-m}!clear@{clear}}
+\index{clear@{clear}!plotting.m@{plotting.\-m}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}clear}\label{plotting_8m_aebfdce4f6cc7241ba38924f77a12e7cf}
+\index{plotting.\-m@{plotting.\-m}!ext@{ext}}
+\index{ext@{ext}!plotting.m@{plotting.\-m}}
+\subsubsection[{ext}]{\setlength{\rightskip}{0pt plus 5cm}ext = [160]}\label{plotting_8m_a6215e022267dc11d572ec677098947ab}
+
+
+Referenced by main().
+
+\index{plotting.\-m@{plotting.\-m}!fid@{fid}}
+\index{fid@{fid}!plotting.m@{plotting.\-m}}
+\subsubsection[{fid}]{\setlength{\rightskip}{0pt plus 5cm}fid = fopen('init.\-160')}\label{plotting_8m_ae9011d40c6f13e68e6f07156e0da7c5d}
+\index{plotting.\-m@{plotting.\-m}!gg@{gg}}
+\index{gg@{gg}!plotting.m@{plotting.\-m}}
+\subsubsection[{gg}]{\setlength{\rightskip}{0pt plus 5cm}B needs to be extended to the same length as {\bf a} gg = {\bf Nn}/{\bf Nnb}}\label{plotting_8m_af0060062d8caa39f53e2d7e81d095ad5}
+\index{plotting.\-m@{plotting.\-m}!ii@{ii}}
+\index{ii@{ii}!plotting.m@{plotting.\-m}}
+\subsubsection[{ii}]{\setlength{\rightskip}{0pt plus 5cm}for ii}\label{plotting_8m_abf9d47cd7d4fbc942e618bb1977019c2}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 1:2:Nnb
+        b_new(2, (ii-1)*gg+1) = b(2,ii)
+\end{DoxyCode}
+\index{plotting.\-m@{plotting.\-m}!jj@{jj}}
+\index{jj@{jj}!plotting.m@{plotting.\-m}}
+\subsubsection[{jj}]{\setlength{\rightskip}{0pt plus 5cm}end for jj}\label{plotting_8m_a09df3fd26e78475d800584930b6bfeed}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 1:gg-1
+            b_new(2, (ii-1)*gg+(jj)*2) = (b(2,ii)*(gg-jj)+b(2,ii+1)*jj)/(gg)
+\end{DoxyCode}
+\index{plotting.\-m@{plotting.\-m}!kk@{kk}}
+\index{kk@{kk}!plotting.m@{plotting.\-m}}
+\subsubsection[{kk}]{\setlength{\rightskip}{0pt plus 5cm}for kk}\label{plotting_8m_af29949bd63fb009eacab5efd11399e40}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 1:length(ext)
+    fid = fopen(['out.',int2str(ext(kk))])
+\end{DoxyCode}
+\index{plotting.\-m@{plotting.\-m}!M1a@{M1a}}
+\index{M1a@{M1a}!plotting.m@{plotting.\-m}}
+\subsubsection[{M1a}]{\setlength{\rightskip}{0pt plus 5cm}M1a = {\bf Ma}(1)}\label{plotting_8m_aee5f364531d0e3bf2eae09cd4d249436}
+\index{plotting.\-m@{plotting.\-m}!M1b@{M1b}}
+\index{M1b@{M1b}!plotting.m@{plotting.\-m}}
+\subsubsection[{M1b}]{\setlength{\rightskip}{0pt plus 5cm}M1b = {\bf Mb}(1)}\label{plotting_8m_aa28add0b26269b1257191bf0a7d92bf7}
+\index{plotting.\-m@{plotting.\-m}!M2a@{M2a}}
+\index{M2a@{M2a}!plotting.m@{plotting.\-m}}
+\subsubsection[{M2a}]{\setlength{\rightskip}{0pt plus 5cm}M2a = {\bf Ma}(2)}\label{plotting_8m_a023a6500888dfce7a2b2f9829da69412}
+\index{plotting.\-m@{plotting.\-m}!M2b@{M2b}}
+\index{M2b@{M2b}!plotting.m@{plotting.\-m}}
+\subsubsection[{M2b}]{\setlength{\rightskip}{0pt plus 5cm}M2b = {\bf Mb}(2)}\label{plotting_8m_ad7cb08aaa48551c8403348d49c5a6bce}
+\index{plotting.\-m@{plotting.\-m}!Ma@{Ma}}
+\index{Ma@{Ma}!plotting.m@{plotting.\-m}}
+\subsubsection[{Ma}]{\setlength{\rightskip}{0pt plus 5cm}Ma ={\bf fscanf}({\bf fid},'\%u',[2 1])}\label{plotting_8m_a18c4e1bb1cc893fbf8b653ed4adbc9b8}
+\index{plotting.\-m@{plotting.\-m}!Mb@{Mb}}
+\index{Mb@{Mb}!plotting.m@{plotting.\-m}}
+\subsubsection[{Mb}]{\setlength{\rightskip}{0pt plus 5cm}Mb ={\bf fscanf}({\bf fid},'\%u',[2 1])}\label{plotting_8m_ae02f8dace6c28950c483bf853ea603c3}
+\index{plotting.\-m@{plotting.\-m}!Nn@{Nn}}
+\index{Nn@{Nn}!plotting.m@{plotting.\-m}}
+\subsubsection[{Nn}]{\setlength{\rightskip}{0pt plus 5cm}Nn = {\bf fscanf}({\bf fid},'\%u',[1 1])}\label{plotting_8m_a8a49678f036ecb35c79f913d252d7a77}
+
+
+Referenced by readmesh().
+
+\index{plotting.\-m@{plotting.\-m}!Nnb@{Nnb}}
+\index{Nnb@{Nnb}!plotting.m@{plotting.\-m}}
+\subsubsection[{Nnb}]{\setlength{\rightskip}{0pt plus 5cm}Nnb = {\bf fscanf}({\bf fid},'\%u',[1 1])}\label{plotting_8m_a5fb7d1cc735c0ff852c27ba483deddf4}
+\index{plotting.\-m@{plotting.\-m}!off@{off}}
+\index{off@{off}!plotting.m@{plotting.\-m}}
+\subsubsection[{off}]{\setlength{\rightskip}{0pt plus 5cm}hold off}\label{plotting_8m_a835accca41274fb237599d9b3c117fcf}
+\index{plotting.\-m@{plotting.\-m}!on@{on}}
+\index{on@{on}!plotting.m@{plotting.\-m}}
+\subsubsection[{on}]{\setlength{\rightskip}{0pt plus 5cm}hold on}\label{plotting_8m_a58ab1fd68e97078232808206b850161b}

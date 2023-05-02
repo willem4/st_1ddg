@@ -1,0 +1,99 @@
+\section{swehllc Class Reference}
+\label{classswehllc}\index{swehllc@{swehllc}}
+
+
+Derived fluxbase class for Shallow Water equations using H\-L\-L\-C with no topography.  
+
+
+
+
+{\ttfamily \#include $<$flux.\-h$>$}
+
+Inheritance diagram for swehllc\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classswehllc}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf eval} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Evaluation of the H\-L\-L\-C flux. \end{DoxyCompactList}\item 
+void {\bf eval\-\_\-l} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Virtual non conservative evaluation of the flux on the left of the element. \end{DoxyCompactList}\item 
+void {\bf eval\-\_\-r} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Virtual non conservative evaluation of the flux on the right of the element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Derived fluxbase class for Shallow Water equations using H\-L\-L\-C with no topography. 
+
+\subsection{Member Function Documentation}
+\index{swehllc@{swehllc}!eval@{eval}}
+\index{eval@{eval}!swehllc@{swehllc}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}double swehllc\-::eval (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{F, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classswehllc_a3cdffa7499fb936220d0084343401cad}
+
+
+Evaluation of the H\-L\-L\-C flux. 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_ab41e8752c750488dbcbc8ef24e277110}.
+
+
+
+References gravity\-\_\-const, and element\-::systemsize1.
+
+\index{swehllc@{swehllc}!eval\-\_\-l@{eval\-\_\-l}}
+\index{eval\-\_\-l@{eval\-\_\-l}!swehllc@{swehllc}}
+\subsubsection[{eval\-\_\-l}]{\setlength{\rightskip}{0pt plus 5cm}void swehllc\-::eval\-\_\-l (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classswehllc_abaf31947a1472a531131f2569919a300}
+
+
+Virtual non conservative evaluation of the flux on the left of the element. 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_a184e5d5629191871c6dd9cd6b4e82799}.
+
+\index{swehllc@{swehllc}!eval\-\_\-r@{eval\-\_\-r}}
+\index{eval\-\_\-r@{eval\-\_\-r}!swehllc@{swehllc}}
+\subsubsection[{eval\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}void swehllc\-::eval\-\_\-r (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classswehllc_af72fc457d5445284b1cef0cdd28071af}
+
+
+Virtual non conservative evaluation of the flux on the right of the element. 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_ab5e6afaa22aff4a1bbbce0bba561fed3}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf flux.\-h}\item 
+{\bf flux.\-cpp}\end{DoxyCompactItemize}

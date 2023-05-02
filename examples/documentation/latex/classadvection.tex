@@ -1,0 +1,99 @@
+\section{advection Class Reference}
+\label{classadvection}\index{advection@{advection}}
+
+
+Derived fluxbase class for Advection.  
+
+
+
+
+{\ttfamily \#include $<$flux.\-h$>$}
+
+Inheritance diagram for advection\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classadvection}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf eval} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Evaluation of the advection flux. \end{DoxyCompactList}\item 
+void {\bf eval\-\_\-l} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Virtual non conservative evaluation of the flux on the left of the element. \end{DoxyCompactList}\item 
+void {\bf eval\-\_\-r} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Virtual non conservative evaluation of the flux on the right of the element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Derived fluxbase class for Advection. 
+
+\subsection{Member Function Documentation}
+\index{advection@{advection}!eval@{eval}}
+\index{eval@{eval}!advection@{advection}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}double advection\-::eval (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{F, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classadvection_a39ffeff22d8c4bab9b209305e9c2ff05}
+
+
+Evaluation of the advection flux. 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_ab41e8752c750488dbcbc8ef24e277110}.
+
+
+
+References a, advection\-\_\-speed, and element\-::systemsize1.
+
+\index{advection@{advection}!eval\-\_\-l@{eval\-\_\-l}}
+\index{eval\-\_\-l@{eval\-\_\-l}!advection@{advection}}
+\subsubsection[{eval\-\_\-l}]{\setlength{\rightskip}{0pt plus 5cm}void advection\-::eval\-\_\-l (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classadvection_a64544ecc593a0e2d9e53c80cddce46fd}
+
+
+Virtual non conservative evaluation of the flux on the left of the element. 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_a184e5d5629191871c6dd9cd6b4e82799}.
+
+\index{advection@{advection}!eval\-\_\-r@{eval\-\_\-r}}
+\index{eval\-\_\-r@{eval\-\_\-r}!advection@{advection}}
+\subsubsection[{eval\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}void advection\-::eval\-\_\-r (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classadvection_a17852fcad013696082568c732fe89003}
+
+
+Virtual non conservative evaluation of the flux on the right of the element. 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_ab5e6afaa22aff4a1bbbce0bba561fed3}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf flux.\-h}\item 
+{\bf flux.\-cpp}\end{DoxyCompactItemize}

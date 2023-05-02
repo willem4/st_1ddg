@@ -1,0 +1,91 @@
+\section{physpara.\-cpp File Reference}
+\label{physpara_8cpp}\index{physpara.\-cpp@{physpara.\-cpp}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double const {\bf gravity\-\_\-const} = 9.\-81
+\begin{DoxyCompactList}\small\item\em Gravity Constant. \end{DoxyCompactList}\item 
+double const {\bf advection\-\_\-speed} = 1.\-0
+\begin{DoxyCompactList}\small\item\em Advection Speed. \end{DoxyCompactList}\item 
+double const {\bf Grass\-\_\-const} = 1
+\begin{DoxyCompactList}\small\item\em Grass Constant. \end{DoxyCompactList}\item 
+double const {\bf Grass\-\_\-exponent} = 3
+\begin{DoxyCompactList}\small\item\em Grass Exponent. \end{DoxyCompactList}\item 
+double const {\bf dissipation\-\_\-alpha} = 1.\-1797
+\begin{DoxyCompactList}\small\item\em Extra Dissipation Scaling $ \beta h^\alpha $. \end{DoxyCompactList}\item 
+double const {\bf dissipation\-\_\-beta} = 2.\-0302e-\/2
+\item 
+double const {\bf dissipation\-\_\-const} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{physpara.\-cpp@{physpara.\-cpp}!advection\-\_\-speed@{advection\-\_\-speed}}
+\index{advection\-\_\-speed@{advection\-\_\-speed}!physpara.cpp@{physpara.\-cpp}}
+\subsubsection[{advection\-\_\-speed}]{\setlength{\rightskip}{0pt plus 5cm}double const advection\-\_\-speed = 1.\-0}\label{physpara_8cpp_a0e52074011cf7b3d4fa8c85dd2461da7}
+
+
+Advection Speed. 
+
+
+
+Referenced by advection\-::eval(), and getdt().
+
+\index{physpara.\-cpp@{physpara.\-cpp}!dissipation\-\_\-alpha@{dissipation\-\_\-alpha}}
+\index{dissipation\-\_\-alpha@{dissipation\-\_\-alpha}!physpara.cpp@{physpara.\-cpp}}
+\subsubsection[{dissipation\-\_\-alpha}]{\setlength{\rightskip}{0pt plus 5cm}double const dissipation\-\_\-alpha = 1.\-1797}\label{physpara_8cpp_a8d455aa4610efb513713db3bbf886208}
+
+
+Extra Dissipation Scaling $ \beta h^\alpha $. 
+
+
+
+Referenced by fluxproc().
+
+\index{physpara.\-cpp@{physpara.\-cpp}!dissipation\-\_\-beta@{dissipation\-\_\-beta}}
+\index{dissipation\-\_\-beta@{dissipation\-\_\-beta}!physpara.cpp@{physpara.\-cpp}}
+\subsubsection[{dissipation\-\_\-beta}]{\setlength{\rightskip}{0pt plus 5cm}double const dissipation\-\_\-beta = 2.\-0302e-\/2}\label{physpara_8cpp_a752e3f9cf5ef0011b3db5475a9f7f8bf}
+
+
+Referenced by fluxproc().
+
+\index{physpara.\-cpp@{physpara.\-cpp}!dissipation\-\_\-const@{dissipation\-\_\-const}}
+\index{dissipation\-\_\-const@{dissipation\-\_\-const}!physpara.cpp@{physpara.\-cpp}}
+\subsubsection[{dissipation\-\_\-const}]{\setlength{\rightskip}{0pt plus 5cm}double const dissipation\-\_\-const = 0}\label{physpara_8cpp_ac317ad6e157f299d3108388f32c9133e}
+
+
+Referenced by fluxproc().
+
+\index{physpara.\-cpp@{physpara.\-cpp}!Grass\-\_\-const@{Grass\-\_\-const}}
+\index{Grass\-\_\-const@{Grass\-\_\-const}!physpara.cpp@{physpara.\-cpp}}
+\subsubsection[{Grass\-\_\-const}]{\setlength{\rightskip}{0pt plus 5cm}double const Grass\-\_\-const = 1}\label{physpara_8cpp_a55113351785dd0a77b6ca3c5666d43cd}
+
+
+Grass Constant. 
+
+
+
+Referenced by exchange\-::eval(), sedimenttransport\-::eval(), hllgrass\-::eval(), lfgrass\-::eval(), lfgrassmomentum\-::eval(), grassburgers\-::eval(), lfgrassmomentumdiffusion\-::eval(), and getdt().
+
+\index{physpara.\-cpp@{physpara.\-cpp}!Grass\-\_\-exponent@{Grass\-\_\-exponent}}
+\index{Grass\-\_\-exponent@{Grass\-\_\-exponent}!physpara.cpp@{physpara.\-cpp}}
+\subsubsection[{Grass\-\_\-exponent}]{\setlength{\rightskip}{0pt plus 5cm}double const Grass\-\_\-exponent = 3}\label{physpara_8cpp_a3ee478f4c8fcdee9225909355e92ca7c}
+
+
+Grass Exponent. 
+
+
+
+Referenced by sedimenttransport\-::eval(), hllgrass\-::eval(), lfgrass\-::eval(), lfgrassmomentum\-::eval(), grassburgers\-::eval(), and lfgrassmomentumdiffusion\-::eval().
+
+\index{physpara.\-cpp@{physpara.\-cpp}!gravity\-\_\-const@{gravity\-\_\-const}}
+\index{gravity\-\_\-const@{gravity\-\_\-const}!physpara.cpp@{physpara.\-cpp}}
+\subsubsection[{gravity\-\_\-const}]{\setlength{\rightskip}{0pt plus 5cm}double const gravity\-\_\-const = 9.\-81}\label{physpara_8cpp_a54e0c4147ff3791a9c2ecb31981976be}
+
+
+Gravity Constant. 
+
+
+
+Referenced by topography\-::eval(), exchange\-::eval(), swehllc\-::eval(), swehllctopography\-::eval(), sedimenttransport\-::eval(), hllgrass\-::eval(), lfgrass\-::eval(), lfgrassmomentum\-::eval(), suspendedsediment\-::eval(), lfgrassmomentumdiffusion\-::eval(), swehllctopography\-::eval\-\_\-l(), sedimenttransport\-::eval\-\_\-l(), lfgrassmomentum\-::eval\-\_\-l(), suspendedsediment\-::eval\-\_\-l(), lfgrassmomentumdiffusion\-::eval\-\_\-l(), swehllctopography\-::eval\-\_\-r(), sedimenttransport\-::eval\-\_\-r(), lfgrassmomentum\-::eval\-\_\-r(), suspendedsediment\-::eval\-\_\-r(), lfgrassmomentumdiffusion\-::eval\-\_\-r(), exactriemann(), Function1(), Function2(), getdt(), and testfcn().
+

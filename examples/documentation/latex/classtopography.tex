@@ -1,0 +1,59 @@
+\section{topography Class Reference}
+\label{classtopography}\index{topography@{topography}}
+
+
+Derived Topography Class from Source\-Base.  
+
+
+
+
+{\ttfamily \#include $<$source.\-h$>$}
+
+Inheritance diagram for topography\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtopography}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf eval} (double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Evaluation of the Source in the Shallow Water Equations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Derived Topography Class from Source\-Base. 
+
+\subsection{Member Function Documentation}
+\index{topography@{topography}!eval@{eval}}
+\index{eval@{eval}!topography@{topography}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}void topography\-::eval (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{F2, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-Lslope, }
+\item[{double $\ast$}]{q\-L}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtopography_a74a5ec79cd0134dc7c43aa91e81c4669}
+
+
+Evaluation of the Source in the Shallow Water Equations. 
+
+
+\begin{DoxyItemize}
+\item H\-\_\-0 / (U\-\_\-0)$^\wedge$2; 
+\end{DoxyItemize}
+
+Implements {\bf sourcebase} \doxyref{}{p.}{classsourcebase_aa47f29eea4fb554586279a5fa9394cb6}.
+
+
+
+References gravity\-\_\-const, and element\-::systemsize1.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf source.\-h}\item 
+{\bf source.\-cpp}\end{DoxyCompactItemize}

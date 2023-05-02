@@ -1,0 +1,107 @@
+\section{swehllctopography Class Reference}
+\label{classswehllctopography}\index{swehllctopography@{swehllctopography}}
+
+
+Derived fluxbase class for Shallow Water equations using H\-L\-L\-C with discontinuous topography.  
+
+
+
+
+{\ttfamily \#include $<$flux.\-h$>$}
+
+Inheritance diagram for swehllctopography\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classswehllctopography}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf eval} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Evaluation of the H\-L\-L\-C flux with topography correction. \end{DoxyCompactList}\item 
+void {\bf eval\-\_\-l} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Non conservative flux as suggested by Bouchut et al. (2004). \end{DoxyCompactList}\item 
+void {\bf eval\-\_\-r} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Non conservative flux as suggested by Bouchut et al. (2004). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Derived fluxbase class for Shallow Water equations using H\-L\-L\-C with discontinuous topography. 
+
+\subsection{Member Function Documentation}
+\index{swehllctopography@{swehllctopography}!eval@{eval}}
+\index{eval@{eval}!swehllctopography@{swehllctopography}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}double swehllctopography\-::eval (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{F, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classswehllctopography_a94451a4ed6ec36f3c79ef8145cc81d47}
+
+
+Evaluation of the H\-L\-L\-C flux with topography correction. 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_ab41e8752c750488dbcbc8ef24e277110}.
+
+
+
+References gravity\-\_\-const, and element\-::systemsize1.
+
+\index{swehllctopography@{swehllctopography}!eval\-\_\-l@{eval\-\_\-l}}
+\index{eval\-\_\-l@{eval\-\_\-l}!swehllctopography@{swehllctopography}}
+\subsubsection[{eval\-\_\-l}]{\setlength{\rightskip}{0pt plus 5cm}void swehllctopography\-::eval\-\_\-l (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{Fl, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classswehllctopography_a29fe7da27580e800cebbfb98f2646fc3}
+
+
+Non conservative flux as suggested by Bouchut et al. (2004). 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_a184e5d5629191871c6dd9cd6b4e82799}.
+
+
+
+References gravity\-\_\-const, and element\-::systemsize1.
+
+\index{swehllctopography@{swehllctopography}!eval\-\_\-r@{eval\-\_\-r}}
+\index{eval\-\_\-r@{eval\-\_\-r}!swehllctopography@{swehllctopography}}
+\subsubsection[{eval\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}void swehllctopography\-::eval\-\_\-r (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{Fr, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classswehllctopography_a858997ee906ad37ec1490abaff502841}
+
+
+Non conservative flux as suggested by Bouchut et al. (2004). 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_ab5e6afaa22aff4a1bbbce0bba561fed3}.
+
+
+
+References gravity\-\_\-const, and element\-::systemsize1.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf flux.\-h}\item 
+{\bf flux.\-cpp}\end{DoxyCompactItemize}

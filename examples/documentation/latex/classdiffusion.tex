@@ -1,0 +1,55 @@
+\section{diffusion Class Reference}
+\label{classdiffusion}\index{diffusion@{diffusion}}
+
+
+L\-D\-G diffusion flux class used in comination with Burgers' equation.  
+
+
+
+
+{\ttfamily \#include $<$flux2.\-h$>$}
+
+Inheritance diagram for diffusion\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdiffusion}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf eval} (double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Evaluates the flux for the L\-D\-G variables for the difussion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+L\-D\-G diffusion flux class used in comination with Burgers' equation. 
+
+\subsection{Member Function Documentation}
+\index{diffusion@{diffusion}!eval@{eval}}
+\index{eval@{eval}!diffusion@{diffusion}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}double diffusion\-::eval (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{F, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classdiffusion_a998c0963f4273bdb1b81e434501caf7e}
+
+
+Evaluates the flux for the L\-D\-G variables for the difussion. 
+
+
+
+Implements {\bf flux2base} \doxyref{}{p.}{classflux2base_a4ecfc0d7470722ef299fa054c926f540}.
+
+
+
+References element\-::systemsize2.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf flux2.\-h}\item 
+{\bf flux2.\-cpp}\end{DoxyCompactItemize}

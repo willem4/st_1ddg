@@ -1,0 +1,9 @@
+cd ..
+make
+cp st_1ddg ~/bin/
+cd riemann
+st_1ddg riemRS.20
+st_1ddg riemRS.40
+st_1ddg riemRS.80
+st_1ddg riemRS.160
+st_1ddg riemRS.320

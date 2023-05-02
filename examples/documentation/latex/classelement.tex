@@ -1,0 +1,360 @@
+\section{element Class Reference}
+\label{classelement}\index{element@{element}}
+
+
+The element class.  
+
+
+
+
+{\ttfamily \#include $<$element.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf element} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bf element} (int, int, double)
+\begin{DoxyCompactList}\small\item\em Overloaded constructor. \end{DoxyCompactList}\item 
+void {\bf updateu} ()
+\begin{DoxyCompactList}\small\item\em Updates u1, u2, u1slope and u2slope in each time step. \end{DoxyCompactList}\item 
+void {\bf updateq} ()
+\begin{DoxyCompactList}\small\item\em Updates q1 and q2 in every time step. \end{DoxyCompactList}\item 
+{\bf $\sim$element} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf Node1}
+\begin{DoxyCompactList}\small\item\em The node numbers which bound the element. \end{DoxyCompactList}\item 
+int {\bf Node2}
+\item 
+double {\bf length}
+\begin{DoxyCompactList}\small\item\em The length of the element. \end{DoxyCompactList}\item 
+{\bf state} $\ast$ {\bf U}
+\begin{DoxyCompactList}\small\item\em The stored Discontinuous Galerkin variables. \end{DoxyCompactList}\item 
+{\bf state} $\ast$ {\bf R\-H\-Sof\-U}
+\begin{DoxyCompactList}\small\item\em The right hand side used while calculating one time step. \end{DoxyCompactList}\item 
+{\bf state} $\ast$ {\bf U\-\_\-old}
+\begin{DoxyCompactList}\small\item\em A backup of U needed for some time integration schemes. \end{DoxyCompactList}\item 
+{\bf state} $\ast$ {\bf R\-H\-Sof\-U\-\_\-old}
+\begin{DoxyCompactList}\small\item\em A backup of R\-H\-Sof\-U needed for some time integration schemes. \end{DoxyCompactList}\item 
+{\bf state} $\ast$ {\bf Q}
+\begin{DoxyCompactList}\small\item\em The Local Discontinuous Galerkin variables. \end{DoxyCompactList}\item 
+{\bf state} $\ast$ {\bf R\-H\-Sof\-Q}
+\begin{DoxyCompactList}\small\item\em The right hand side used for Local Discontinuous Galerkin calculations. \end{DoxyCompactList}\item 
+{\bf state} {\bf Stab\-Op}
+\begin{DoxyCompactList}\small\item\em The value of the stabilisation operator. \end{DoxyCompactList}\item 
+{\bf state} {\bf Stab\-Op\-\_\-old}
+\begin{DoxyCompactList}\small\item\em A backup of the stabilisation operator used in some time integration schemes. \end{DoxyCompactList}\item 
+double {\bf Kriv}
+\begin{DoxyCompactList}\small\item\em Discontinuity detector variable from Krividonova et al., 2004. \end{DoxyCompactList}\item 
+int {\bf Kriv\-Count}
+\begin{DoxyCompactList}\small\item\em Count of how many faces have information which passes into the cell $\| \partial\Omega^- \|$. \end{DoxyCompactList}\item 
+double {\bf ws}
+\begin{DoxyCompactList}\small\item\em The maximum wavespeed sorted per element used to determine the time step. \end{DoxyCompactList}\item 
+double {\bf dds}
+\begin{DoxyCompactList}\small\item\em The maximum d\-\_\-xx wavespeed sorted per element used to determine the time step. \end{DoxyCompactList}\item 
+double $\ast$ {\bf u1}
+\begin{DoxyCompactList}\small\item\em The values of the D\-G variables in -\/ep. \end{DoxyCompactList}\item 
+double $\ast$ {\bf u2}
+\begin{DoxyCompactList}\small\item\em The values of the D\-G variables in ep. \end{DoxyCompactList}\item 
+double $\ast$ {\bf u1slope}
+\begin{DoxyCompactList}\small\item\em The values of slopes of the D\-G variables in -\/ep. \end{DoxyCompactList}\item 
+double $\ast$ {\bf u2slope}
+\begin{DoxyCompactList}\small\item\em The values of slopes of the D\-G variables in ep. \end{DoxyCompactList}\item 
+double $\ast$ {\bf q1}
+\begin{DoxyCompactList}\small\item\em The values of the L\-D\-G variables in -\/ep. \end{DoxyCompactList}\item 
+double $\ast$ {\bf q2}
+\begin{DoxyCompactList}\small\item\em The values of the L\-D\-G variables in -\/ep. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int {\bf systemsize1}
+\begin{DoxyCompactList}\small\item\em The dimension of the Discontinuous Galerkin variables. \end{DoxyCompactList}\item 
+static int {\bf systemsize2}
+\begin{DoxyCompactList}\small\item\em The dimension of the Local Discontinuous Galerkin variables. \end{DoxyCompactList}\item 
+static double {\bf ep} = 1.\-0/sqrt(3.\-0)
+\begin{DoxyCompactList}\small\item\em Interpolation point used for two point Gaussian quadrature. \end{DoxyCompactList}\item 
+static double {\bf C\-F\-L}
+\begin{DoxyCompactList}\small\item\em The Courant coefficient number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The element class. 
+
+The element class is the building block of how the information per element is stored. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{element@{element}!element@{element}}
+\index{element@{element}!element@{element}}
+\subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}element\-::element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classelement_ab855762fbfbeb7307a78943b10c3afbb}
+
+
+Default constructor. 
+
+\index{element@{element}!element@{element}}
+\index{element@{element}!element@{element}}
+\subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}element\-::element (
+\begin{DoxyParamCaption}
+\item[{int}]{value1, }
+\item[{int}]{value2, }
+\item[{double}]{value3}
+\end{DoxyParamCaption}
+)}\label{classelement_afae6e952256e36fe5836b24af2c5509c}
+
+
+Overloaded constructor. 
+
+
+
+References systemsize1, and systemsize2.
+
+\index{element@{element}!$\sim$element@{$\sim$element}}
+\index{$\sim$element@{$\sim$element}!element@{element}}
+\subsubsection[{$\sim$element}]{\setlength{\rightskip}{0pt plus 5cm}element\-::$\sim$element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classelement_ab986cb2721f12b05716a9f2eb583a840}
+
+
+Default destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{element@{element}!updateq@{updateq}}
+\index{updateq@{updateq}!element@{element}}
+\subsubsection[{updateq}]{\setlength{\rightskip}{0pt plus 5cm}void element\-::updateq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classelement_a749ff1b33a374f49d8816e63d48b9770}
+
+
+Updates q1 and q2 in every time step. 
+
+Loop over the variables.
+
+Determine the new values at +ep and -\/ep. 
+
+References systemsize2.
+
+\index{element@{element}!updateu@{updateu}}
+\index{updateu@{updateu}!element@{element}}
+\subsubsection[{updateu}]{\setlength{\rightskip}{0pt plus 5cm}void element\-::updateu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classelement_a9d4be14ea3bb6fecd86ace1fbfa2899d}
+
+
+Updates u1, u2, u1slope and u2slope in each time step. 
+
+Loop over the variables.
+
+Determine the new values at +ep and -\/ep. 
+
+References systemsize1.
+
+
+
+\subsection{Member Data Documentation}
+\index{element@{element}!C\-F\-L@{C\-F\-L}}
+\index{C\-F\-L@{C\-F\-L}!element@{element}}
+\subsubsection[{C\-F\-L}]{\setlength{\rightskip}{0pt plus 5cm}double element\-::\-C\-F\-L\hspace{0.3cm}{\ttfamily [static]}}\label{classelement_abd301c7f64d964fb0b276d23989b2e79}
+
+
+The Courant coefficient number. 
+
+
+
+Referenced by main().
+
+\index{element@{element}!dds@{dds}}
+\index{dds@{dds}!element@{element}}
+\subsubsection[{dds}]{\setlength{\rightskip}{0pt plus 5cm}double element\-::dds}\label{classelement_a2cff653cbc92e0ee758478899d177b4e}
+
+
+The maximum d\-\_\-xx wavespeed sorted per element used to determine the time step. 
+
+\index{element@{element}!ep@{ep}}
+\index{ep@{ep}!element@{element}}
+\subsubsection[{ep}]{\setlength{\rightskip}{0pt plus 5cm}double element\-::ep = 1.\-0/sqrt(3.\-0)\hspace{0.3cm}{\ttfamily [static]}}\label{classelement_a38e6f5a1b5f9f18348dbc73c55b01dd8}
+
+
+Interpolation point used for two point Gaussian quadrature. 
+
+
+
+Referenced by sourceproc().
+
+\index{element@{element}!Kriv@{Kriv}}
+\index{Kriv@{Kriv}!element@{element}}
+\subsubsection[{Kriv}]{\setlength{\rightskip}{0pt plus 5cm}double element\-::\-Kriv}\label{classelement_abe57494fc7bfc89bde32781336cca651}
+
+
+Discontinuity detector variable from Krividonova et al., 2004. 
+
+\index{element@{element}!Kriv\-Count@{Kriv\-Count}}
+\index{Kriv\-Count@{Kriv\-Count}!element@{element}}
+\subsubsection[{Kriv\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int element\-::\-Kriv\-Count}\label{classelement_ab8b596c587764a871d0ad0ec9e01636d}
+
+
+Count of how many faces have information which passes into the cell $\| \partial\Omega^- \|$. 
+
+\index{element@{element}!length@{length}}
+\index{length@{length}!element@{element}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}double element\-::length}\label{classelement_a06670ef1299084fc645fc1441ee9fe62}
+
+
+The length of the element. 
+
+\index{element@{element}!Node1@{Node1}}
+\index{Node1@{Node1}!element@{element}}
+\subsubsection[{Node1}]{\setlength{\rightskip}{0pt plus 5cm}int element\-::\-Node1}\label{classelement_a39288677ba181a95c92cdb269947cfac}
+
+
+The node numbers which bound the element. 
+
+\index{element@{element}!Node2@{Node2}}
+\index{Node2@{Node2}!element@{element}}
+\subsubsection[{Node2}]{\setlength{\rightskip}{0pt plus 5cm}int element\-::\-Node2}\label{classelement_a30ebcc5c6f8e8a4ab3f960da1ec410d1}
+\index{element@{element}!Q@{Q}}
+\index{Q@{Q}!element@{element}}
+\subsubsection[{Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state}$\ast$ element\-::\-Q}\label{classelement_aa83f5142f575c2bc3504cf25e8749ab6}
+
+
+The Local Discontinuous Galerkin variables. 
+
+\index{element@{element}!q1@{q1}}
+\index{q1@{q1}!element@{element}}
+\subsubsection[{q1}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ element\-::q1}\label{classelement_afee2741280acb7f07e4d97e3d319f85b}
+
+
+The values of the L\-D\-G variables in -\/ep. 
+
+\index{element@{element}!q2@{q2}}
+\index{q2@{q2}!element@{element}}
+\subsubsection[{q2}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ element\-::q2}\label{classelement_afc7fe8e8ea7c9152dbf462a8a4d165af}
+
+
+The values of the L\-D\-G variables in -\/ep. 
+
+\index{element@{element}!R\-H\-Sof\-Q@{R\-H\-Sof\-Q}}
+\index{R\-H\-Sof\-Q@{R\-H\-Sof\-Q}!element@{element}}
+\subsubsection[{R\-H\-Sof\-Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state}$\ast$ element\-::\-R\-H\-Sof\-Q}\label{classelement_a51050bbe3d8c2823a28a245601cd13fd}
+
+
+The right hand side used for Local Discontinuous Galerkin calculations. 
+
+\index{element@{element}!R\-H\-Sof\-U@{R\-H\-Sof\-U}}
+\index{R\-H\-Sof\-U@{R\-H\-Sof\-U}!element@{element}}
+\subsubsection[{R\-H\-Sof\-U}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state}$\ast$ element\-::\-R\-H\-Sof\-U}\label{classelement_ad30a3bbb3101ee29d089fe12cc8302fd}
+
+
+The right hand side used while calculating one time step. 
+
+\index{element@{element}!R\-H\-Sof\-U\-\_\-old@{R\-H\-Sof\-U\-\_\-old}}
+\index{R\-H\-Sof\-U\-\_\-old@{R\-H\-Sof\-U\-\_\-old}!element@{element}}
+\subsubsection[{R\-H\-Sof\-U\-\_\-old}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state}$\ast$ element\-::\-R\-H\-Sof\-U\-\_\-old}\label{classelement_ae661a551143416f6b60b2c43890cd8e3}
+
+
+A backup of R\-H\-Sof\-U needed for some time integration schemes. 
+
+\index{element@{element}!Stab\-Op@{Stab\-Op}}
+\index{Stab\-Op@{Stab\-Op}!element@{element}}
+\subsubsection[{Stab\-Op}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state} element\-::\-Stab\-Op}\label{classelement_ae98a7807eda38e991af4be3c9a2f3049}
+
+
+The value of the stabilisation operator. 
+
+\index{element@{element}!Stab\-Op\-\_\-old@{Stab\-Op\-\_\-old}}
+\index{Stab\-Op\-\_\-old@{Stab\-Op\-\_\-old}!element@{element}}
+\subsubsection[{Stab\-Op\-\_\-old}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state} element\-::\-Stab\-Op\-\_\-old}\label{classelement_adb01f777e07f9049787784e9e3cb03f9}
+
+
+A backup of the stabilisation operator used in some time integration schemes. 
+
+\index{element@{element}!systemsize1@{systemsize1}}
+\index{systemsize1@{systemsize1}!element@{element}}
+\subsubsection[{systemsize1}]{\setlength{\rightskip}{0pt plus 5cm}int element\-::systemsize1\hspace{0.3cm}{\ttfamily [static]}}\label{classelement_ab273d8a7b662315d58ed949018e26ed2}
+
+
+The dimension of the Discontinuous Galerkin variables. 
+
+
+
+Referenced by cranknicolsonwp(), element(), eulerforw(), topography\-::eval(), advection\-::eval(), exchange\-::eval(), burgers\-::eval(), burgersdiffusion\-::eval(), swehllc\-::eval(), swehllctopography\-::eval(), sedimenttransport\-::eval(), grassburgers\-::eval(), suspendedsediment\-::eval(), swehllctopography\-::eval\-\_\-l(), sedimenttransport\-::eval\-\_\-l(), lfgrassmomentum\-::eval\-\_\-l(), suspendedsediment\-::eval\-\_\-l(), lfgrassmomentumdiffusion\-::eval\-\_\-l(), swehllctopography\-::eval\-\_\-r(), sedimenttransport\-::eval\-\_\-r(), lfgrassmomentum\-::eval\-\_\-r(), suspendedsediment\-::eval\-\_\-r(), lfgrassmomentumdiffusion\-::eval\-\_\-r(), flux2proc(), fluxproc(), initcon(), main(), node\-::node(), output(), rk3(), sourceproc(), updatenodesu(), and updateu().
+
+\index{element@{element}!systemsize2@{systemsize2}}
+\index{systemsize2@{systemsize2}!element@{element}}
+\subsubsection[{systemsize2}]{\setlength{\rightskip}{0pt plus 5cm}int element\-::systemsize2\hspace{0.3cm}{\ttfamily [static]}}\label{classelement_a32e743b830c5d986454bbcfe7911ce30}
+
+
+The dimension of the Local Discontinuous Galerkin variables. 
+
+
+
+Referenced by cranknicolsonwp(), element(), eulerforw(), diffusion\-::eval(), sedimentdiffusion\-::eval(), flux2proc(), main(), node\-::node(), output(), rk3(), updatenodesq(), and updateq().
+
+\index{element@{element}!U@{U}}
+\index{U@{U}!element@{element}}
+\subsubsection[{U}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state}$\ast$ element\-::\-U}\label{classelement_ab5bba2272163b3ac622f4de3293da7de}
+
+
+The stored Discontinuous Galerkin variables. 
+
+\index{element@{element}!u1@{u1}}
+\index{u1@{u1}!element@{element}}
+\subsubsection[{u1}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ element\-::u1}\label{classelement_a35bc049ae767ff3bb3ace6983d8a22a7}
+
+
+The values of the D\-G variables in -\/ep. 
+
+\index{element@{element}!u1slope@{u1slope}}
+\index{u1slope@{u1slope}!element@{element}}
+\subsubsection[{u1slope}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ element\-::u1slope}\label{classelement_ae9779e7ddf4675c3a7ef3a5955aa613c}
+
+
+The values of slopes of the D\-G variables in -\/ep. 
+
+\index{element@{element}!u2@{u2}}
+\index{u2@{u2}!element@{element}}
+\subsubsection[{u2}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ element\-::u2}\label{classelement_ad58036341aac37c97cb81d28f5e26409}
+
+
+The values of the D\-G variables in ep. 
+
+\index{element@{element}!u2slope@{u2slope}}
+\index{u2slope@{u2slope}!element@{element}}
+\subsubsection[{u2slope}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ element\-::u2slope}\label{classelement_a7488ad853e91d10a94afbdd7b0450682}
+
+
+The values of slopes of the D\-G variables in ep. 
+
+\index{element@{element}!U\-\_\-old@{U\-\_\-old}}
+\index{U\-\_\-old@{U\-\_\-old}!element@{element}}
+\subsubsection[{U\-\_\-old}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state}$\ast$ element\-::\-U\-\_\-old}\label{classelement_a7c6730d8fb495e959b0479f2c6a21d9d}
+
+
+A backup of U needed for some time integration schemes. 
+
+\index{element@{element}!ws@{ws}}
+\index{ws@{ws}!element@{element}}
+\subsubsection[{ws}]{\setlength{\rightskip}{0pt plus 5cm}double element\-::ws}\label{classelement_a9b99359b392c0e02a7706cd447f8b82d}
+
+
+The maximum wavespeed sorted per element used to determine the time step. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf element.\-h}\item 
+{\bf element.\-cpp}\end{DoxyCompactItemize}

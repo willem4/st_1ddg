@@ -1,0 +1,58 @@
+\section{updatenodes.\-h File Reference}
+\label{updatenodes_8h}\index{updatenodes.\-h@{updatenodes.\-h}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}state.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}element.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flux.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}enumtypes.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf updatenodesu} (vector$<$ {\bf node} $>$ \&Nodes, vector$<$ {\bf element} $>$ \&Elements, int bcl, int bcr, {\bf testtypedescr} testtype, double t)
+\item 
+int {\bf updatenodesq} (vector$<$ {\bf node} $>$ \&Nodes, vector$<$ {\bf element} $>$ \&Elements, int bcl, int bcr, {\bf testtypedescr} testtype, double t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{updatenodes.\-h@{updatenodes.\-h}!updatenodesq@{updatenodesq}}
+\index{updatenodesq@{updatenodesq}!updatenodes.h@{updatenodes.\-h}}
+\subsubsection[{updatenodesq}]{\setlength{\rightskip}{0pt plus 5cm}int updatenodesq (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf node} $>$ \&}]{Nodes, }
+\item[{vector$<$ {\bf element} $>$ \&}]{Elements, }
+\item[{int}]{bcl, }
+\item[{int}]{bcr, }
+\item[{{\bf testtypedescr}}]{testtype, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)}\label{updatenodes_8h_aa625f6fcfda47789da934d1c92f36680}
+
+
+References S\-W\-E\-Flow\-Over\-Siny\-Bed\-I, element\-::systemsize2, and testfcn().
+
+
+
+Referenced by fluxproc().
+
+\index{updatenodes.\-h@{updatenodes.\-h}!updatenodesu@{updatenodesu}}
+\index{updatenodesu@{updatenodesu}!updatenodes.h@{updatenodes.\-h}}
+\subsubsection[{updatenodesu}]{\setlength{\rightskip}{0pt plus 5cm}int updatenodesu (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf node} $>$ \&}]{Nodes, }
+\item[{vector$<$ {\bf element} $>$ \&}]{Elements, }
+\item[{int}]{bcl, }
+\item[{int}]{bcr, }
+\item[{{\bf testtypedescr}}]{testtype, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)}\label{updatenodes_8h_a2b504d63421860262db54e7b637303ca}
+Update interpolation points in the Element. 
+
+References element\-::systemsize1, and testfcn().
+
+
+
+Referenced by flux2proc().
+

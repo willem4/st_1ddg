@@ -1,0 +1,47 @@
+\section{cranknicolsonwp.\-cpp File Reference}
+\label{cranknicolsonwp_8cpp}\index{cranknicolsonwp.\-cpp@{cranknicolsonwp.\-cpp}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}state.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}element.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}source.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flux.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flux2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fluxproc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flux2proc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sourceproc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cranknicolsonwp.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}updatenodes.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf cranknicolsonwp} (double \&dt, vector$<$ {\bf node} $>$ \&Nodes, vector$<$ {\bf element} $>$ \&Elements, int bcl, int bcr, {\bf testtypedescr} testtype, {\bf fluxbase} $\ast$fluxtype, {\bf sourcebase} $\ast$sourcetype, {\bf flux2base} $\ast$flux2type, double t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cranknicolsonwp.\-cpp@{cranknicolsonwp.\-cpp}!cranknicolsonwp@{cranknicolsonwp}}
+\index{cranknicolsonwp@{cranknicolsonwp}!cranknicolsonwp.cpp@{cranknicolsonwp.\-cpp}}
+\subsubsection[{cranknicolsonwp}]{\setlength{\rightskip}{0pt plus 5cm}int cranknicolsonwp (
+\begin{DoxyParamCaption}
+\item[{double \&}]{dt, }
+\item[{vector$<$ {\bf node} $>$ \&}]{Nodes, }
+\item[{vector$<$ {\bf element} $>$ \&}]{Elements, }
+\item[{int}]{bcl, }
+\item[{int}]{bcr, }
+\item[{{\bf testtypedescr}}]{testtype, }
+\item[{{\bf fluxbase} $\ast$}]{fluxtype, }
+\item[{{\bf sourcebase} $\ast$}]{sourcetype, }
+\item[{{\bf flux2base} $\ast$}]{flux2type, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)}\label{cranknicolsonwp_8cpp_a6a037a9a262c7b43bf9cbbd704cfec92}
+
+
+References flux2proc(), fluxproc(), sourceproc(), state\-::statesize, element\-::systemsize1, and element\-::systemsize2.
+
+
+
+Referenced by main().
+

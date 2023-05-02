@@ -1,0 +1,106 @@
+\section{fluxbase Class Reference}
+\label{classfluxbase}\index{fluxbase@{fluxbase}}
+
+
+Class Fluxbase.  
+
+
+
+
+{\ttfamily \#include $<$flux.\-h$>$}
+
+Inheritance diagram for fluxbase\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classfluxbase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double {\bf eval} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Virtual evaluation of the flux. \end{DoxyCompactList}\item 
+virtual void {\bf eval\-\_\-l} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Virtual non conservative evaluation of the flux on the left of the element. \end{DoxyCompactList}\item 
+virtual void {\bf eval\-\_\-r} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Virtual non conservative evaluation of the flux on the right of the element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class Fluxbase. 
+
+\subsection{Member Function Documentation}
+\index{fluxbase@{fluxbase}!eval@{eval}}
+\index{eval@{eval}!fluxbase@{fluxbase}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}virtual double fluxbase\-::eval (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classfluxbase_ab41e8752c750488dbcbc8ef24e277110}
+
+
+Virtual evaluation of the flux. 
+
+
+
+Implemented in {\bf lfgrassmomentumdiffusion} \doxyref{}{p.}{classlfgrassmomentumdiffusion_af85373170c01bfb07746514e007e7ab6}, {\bf suspendedsediment} \doxyref{}{p.}{classsuspendedsediment_a26e0411516045d46bc504acc7407797e}, {\bf grassburgers} \doxyref{}{p.}{classgrassburgers_ae2753add9bf6283ee9109535b2ae9bc3}, {\bf lfgrassmomentum} \doxyref{}{p.}{classlfgrassmomentum_a250fc27c64ad8cd33ba8f5b63d83e835}, {\bf lfgrass} \doxyref{}{p.}{classlfgrass_a7f1e440a01f3df687c94afe761751ded}, {\bf hllgrass} \doxyref{}{p.}{classhllgrass_a77f4e0b84a110faf3cd1f5b68a5e9a3c}, {\bf sedimenttransport} \doxyref{}{p.}{classsedimenttransport_a05b589c655e8dd393a49acd530bf1e4f}, {\bf swehllctopography} \doxyref{}{p.}{classswehllctopography_a94451a4ed6ec36f3c79ef8145cc81d47}, {\bf swehllc} \doxyref{}{p.}{classswehllc_a3cdffa7499fb936220d0084343401cad}, {\bf burgersdiffusion} \doxyref{}{p.}{classburgersdiffusion_abb97ec0449cd1c0a8ad476b7de3a62a9}, {\bf burgers} \doxyref{}{p.}{classburgers_a0f757dbcb4dc096dc7d44a32b0a7a7df}, and {\bf advection} \doxyref{}{p.}{classadvection_a39ffeff22d8c4bab9b209305e9c2ff05}.
+
+
+
+Referenced by fluxproc().
+
+\index{fluxbase@{fluxbase}!eval\-\_\-l@{eval\-\_\-l}}
+\index{eval\-\_\-l@{eval\-\_\-l}!fluxbase@{fluxbase}}
+\subsubsection[{eval\-\_\-l}]{\setlength{\rightskip}{0pt plus 5cm}virtual void fluxbase\-::eval\-\_\-l (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classfluxbase_a184e5d5629191871c6dd9cd6b4e82799}
+
+
+Virtual non conservative evaluation of the flux on the left of the element. 
+
+
+
+Implemented in {\bf lfgrassmomentumdiffusion} \doxyref{}{p.}{classlfgrassmomentumdiffusion_a536d62fbd5be494414d061b44ec6c92e}, {\bf suspendedsediment} \doxyref{}{p.}{classsuspendedsediment_af4d3a3daf5a292a36b438512704d4098}, {\bf grassburgers} \doxyref{}{p.}{classgrassburgers_ade85dba58662fb903843ea6005576acd}, {\bf lfgrassmomentum} \doxyref{}{p.}{classlfgrassmomentum_ac0c120c7646e0b92c9907f87f69bc7a3}, {\bf lfgrass} \doxyref{}{p.}{classlfgrass_a6b3a5ec337a60dc98cf6d1f002836f2f}, {\bf hllgrass} \doxyref{}{p.}{classhllgrass_a86ef7d244e018c6a4f64324e2bb70fc4}, {\bf sedimenttransport} \doxyref{}{p.}{classsedimenttransport_a3624de092117d19e1b355493a4059edb}, {\bf swehllctopography} \doxyref{}{p.}{classswehllctopography_a29fe7da27580e800cebbfb98f2646fc3}, {\bf swehllc} \doxyref{}{p.}{classswehllc_abaf31947a1472a531131f2569919a300}, {\bf burgersdiffusion} \doxyref{}{p.}{classburgersdiffusion_a0ba7b3bc143ecd0cfb40431f957dc552}, {\bf burgers} \doxyref{}{p.}{classburgers_ad2ecdd94d31dd2bbf4accdde9967e25e}, and {\bf advection} \doxyref{}{p.}{classadvection_a64544ecc593a0e2d9e53c80cddce46fd}.
+
+
+
+Referenced by fluxproc().
+
+\index{fluxbase@{fluxbase}!eval\-\_\-r@{eval\-\_\-r}}
+\index{eval\-\_\-r@{eval\-\_\-r}!fluxbase@{fluxbase}}
+\subsubsection[{eval\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}virtual void fluxbase\-::eval\-\_\-r (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classfluxbase_ab5e6afaa22aff4a1bbbce0bba561fed3}
+
+
+Virtual non conservative evaluation of the flux on the right of the element. 
+
+
+
+Implemented in {\bf lfgrassmomentumdiffusion} \doxyref{}{p.}{classlfgrassmomentumdiffusion_a93abb9587da0e5c8c2eee205e4f7e9cb}, {\bf suspendedsediment} \doxyref{}{p.}{classsuspendedsediment_a232c9be4aad28973ade9e46222489035}, {\bf grassburgers} \doxyref{}{p.}{classgrassburgers_ad41c129b038579f72dd5817673fdb577}, {\bf lfgrassmomentum} \doxyref{}{p.}{classlfgrassmomentum_affb49cf7a846c68281f955a36ba4d40a}, {\bf lfgrass} \doxyref{}{p.}{classlfgrass_a8b0de0a21d4c2d5782fb335ba83a08fd}, {\bf hllgrass} \doxyref{}{p.}{classhllgrass_a779c9570d1ed6cf821cb4a3f18287019}, {\bf sedimenttransport} \doxyref{}{p.}{classsedimenttransport_a5d1143b0cfff17016fd5eb2acb9fc1b8}, {\bf swehllctopography} \doxyref{}{p.}{classswehllctopography_a858997ee906ad37ec1490abaff502841}, {\bf swehllc} \doxyref{}{p.}{classswehllc_af72fc457d5445284b1cef0cdd28071af}, {\bf burgersdiffusion} \doxyref{}{p.}{classburgersdiffusion_aa369a3cc470f23bb10b9415efb27b677}, {\bf burgers} \doxyref{}{p.}{classburgers_ae0a45d14818eed9d9df8236e6bf6e2b0}, and {\bf advection} \doxyref{}{p.}{classadvection_a17852fcad013696082568c732fe89003}.
+
+
+
+Referenced by fluxproc().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf flux.\-h}\end{DoxyCompactItemize}

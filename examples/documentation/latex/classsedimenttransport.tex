@@ -1,0 +1,107 @@
+\section{sedimenttransport Class Reference}
+\label{classsedimenttransport}\index{sedimenttransport@{sedimenttransport}}
+
+
+Derived fluxbase class for sediment transport.  
+
+
+
+
+{\ttfamily \#include $<$flux.\-h$>$}
+
+Inheritance diagram for sedimenttransport\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsedimenttransport}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf eval} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Evaluation of the ... flux with topography correction. \end{DoxyCompactList}\item 
+void {\bf eval\-\_\-l} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Non conservative flux as suggested by Bouchut et al. (2004). \end{DoxyCompactList}\item 
+void {\bf eval\-\_\-r} (double $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Non conservative flux as suggested by Bouchut et al. (2004). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Derived fluxbase class for sediment transport. 
+
+\subsection{Member Function Documentation}
+\index{sedimenttransport@{sedimenttransport}!eval@{eval}}
+\index{eval@{eval}!sedimenttransport@{sedimenttransport}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}double sedimenttransport\-::eval (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{F, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsedimenttransport_a05b589c655e8dd393a49acd530bf1e4f}
+
+
+Evaluation of the ... flux with topography correction. 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_ab41e8752c750488dbcbc8ef24e277110}.
+
+
+
+References Grass\-\_\-const, Grass\-\_\-exponent, gravity\-\_\-const, and element\-::systemsize1.
+
+\index{sedimenttransport@{sedimenttransport}!eval\-\_\-l@{eval\-\_\-l}}
+\index{eval\-\_\-l@{eval\-\_\-l}!sedimenttransport@{sedimenttransport}}
+\subsubsection[{eval\-\_\-l}]{\setlength{\rightskip}{0pt plus 5cm}void sedimenttransport\-::eval\-\_\-l (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{Fl, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsedimenttransport_a3624de092117d19e1b355493a4059edb}
+
+
+Non conservative flux as suggested by Bouchut et al. (2004). 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_a184e5d5629191871c6dd9cd6b4e82799}.
+
+
+
+References gravity\-\_\-const, and element\-::systemsize1.
+
+\index{sedimenttransport@{sedimenttransport}!eval\-\_\-r@{eval\-\_\-r}}
+\index{eval\-\_\-r@{eval\-\_\-r}!sedimenttransport@{sedimenttransport}}
+\subsubsection[{eval\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}void sedimenttransport\-::eval\-\_\-r (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{Fr, }
+\item[{double $\ast$}]{u\-L, }
+\item[{double $\ast$}]{u\-R, }
+\item[{double $\ast$}]{q\-L, }
+\item[{double $\ast$}]{q\-R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsedimenttransport_a5d1143b0cfff17016fd5eb2acb9fc1b8}
+
+
+Non conservative flux as suggested by Bouchut et al. (2004). 
+
+
+
+Implements {\bf fluxbase} \doxyref{}{p.}{classfluxbase_ab5e6afaa22aff4a1bbbce0bba561fed3}.
+
+
+
+References gravity\-\_\-const, and element\-::systemsize1.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf flux.\-h}\item 
+{\bf flux.\-cpp}\end{DoxyCompactItemize}

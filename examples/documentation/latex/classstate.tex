@@ -1,0 +1,211 @@
+\section{state Class Reference}
+\label{classstate}\index{state@{state}}
+
+
+The state class.  
+
+
+
+
+{\ttfamily \#include $<$state.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf state} ()
+\begin{DoxyCompactList}\small\item\em Default constructor\-: creates an empty state vector. \end{DoxyCompactList}\item 
+{\bf state} {\bf operator=} ({\bf state} vector)
+\begin{DoxyCompactList}\small\item\em Asigns one state vector to another state vector. \end{DoxyCompactList}\item 
+double {\bf get} (double)
+\begin{DoxyCompactList}\small\item\em Function used to get the value of the state at $\zeta \in [-1,1]$. \end{DoxyCompactList}\item 
+double {\bf getslope} (double)
+\begin{DoxyCompactList}\small\item\em Function used to get the value of the first derivative of the state at $\zeta \in [-1,1]$. \end{DoxyCompactList}\item 
+{\bf state} {\bf clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the values in the state vector. \end{DoxyCompactList}\item 
+{\bf state} {\bf operator+=} ({\bf state} vector)
+\begin{DoxyCompactList}\small\item\em Adds the values of one state vector to another. \end{DoxyCompactList}\item 
+{\bf state} {\bf operator$\ast$} (double alpha)
+\begin{DoxyCompactList}\small\item\em Multiplies the values in the state vector by $ \alpha $. \end{DoxyCompactList}\item 
+{\bf state} {\bf operator/} (double alpha)
+\begin{DoxyCompactList}\small\item\em Divides the values in the state vector by $ \alpha $. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ {\bf coefficient}
+\begin{DoxyCompactList}\small\item\em Expansion coefficients of state vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int {\bf statesize}
+\begin{DoxyCompactList}\small\item\em Size of the state vector. \end{DoxyCompactList}\item 
+static {\bf state} {\bf g}
+\begin{DoxyCompactList}\small\item\em Temporary state vector used to prevent memory overflow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The state class. 
+
+The state describes how each variable in the element class is stored. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{state@{state}!state@{state}}
+\index{state@{state}!state@{state}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}state\-::state (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classstate_aee920d9f534640451f22b3525f9cb9de}
+
+
+Default constructor\-: creates an empty state vector. 
+
+
+
+References statesize.
+
+
+
+\subsection{Member Function Documentation}
+\index{state@{state}!clear@{clear}}
+\index{clear@{clear}!state@{state}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state} state\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classstate_a353c4810f55772b6cdb3df21ee964410}
+
+
+Clears the values in the state vector. 
+
+
+
+References statesize.
+
+\index{state@{state}!get@{get}}
+\index{get@{get}!state@{state}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}double state\-::get (
+\begin{DoxyParamCaption}
+\item[{double}]{xi}
+\end{DoxyParamCaption}
+)}\label{classstate_abc460a3926b7e942b805ffc30ecf461e}
+
+
+Function used to get the value of the state at $\zeta \in [-1,1]$. 
+
+
+
+References statesize.
+
+\index{state@{state}!getslope@{getslope}}
+\index{getslope@{getslope}!state@{state}}
+\subsubsection[{getslope}]{\setlength{\rightskip}{0pt plus 5cm}double state\-::getslope (
+\begin{DoxyParamCaption}
+\item[{double}]{xi}
+\end{DoxyParamCaption}
+)}\label{classstate_a13193647ae49dee6ca6fecf12a7015c0}
+
+
+Function used to get the value of the first derivative of the state at $\zeta \in [-1,1]$. 
+
+
+
+References statesize.
+
+\index{state@{state}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!state@{state}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state} state\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{double}]{alpha}
+\end{DoxyParamCaption}
+)}\label{classstate_ad6ad6605800d74976d440523c3e49fbd}
+
+
+Multiplies the values in the state vector by $ \alpha $. 
+
+
+
+References coefficient, and statesize.
+
+\index{state@{state}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!state@{state}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state} state\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{{\bf state}}]{vector}
+\end{DoxyParamCaption}
+)}\label{classstate_ab5093775179d037d1ff1d344c6676cd5}
+
+
+Adds the values of one state vector to another. 
+
+
+
+References coefficient, and statesize.
+
+\index{state@{state}!operator/@{operator/}}
+\index{operator/@{operator/}!state@{state}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state} state\-::operator/ (
+\begin{DoxyParamCaption}
+\item[{double}]{alpha}
+\end{DoxyParamCaption}
+)}\label{classstate_a9198637d75028fd110a8fcff2c603a4d}
+
+
+Divides the values in the state vector by $ \alpha $. 
+
+
+
+References coefficient, and statesize.
+
+\index{state@{state}!operator=@{operator=}}
+\index{operator=@{operator=}!state@{state}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state} state\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf state}}]{vector}
+\end{DoxyParamCaption}
+)}\label{classstate_a224738537429b8b9a0bad9cb7d4eff21}
+
+
+Asigns one state vector to another state vector. 
+
+
+
+References coefficient, and statesize.
+
+
+
+\subsection{Member Data Documentation}
+\index{state@{state}!coefficient@{coefficient}}
+\index{coefficient@{coefficient}!state@{state}}
+\subsubsection[{coefficient}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ state\-::coefficient}\label{classstate_a8f5ab6d0115153b989be84a9a9223359}
+
+
+Expansion coefficients of state vector. 
+
+
+
+Referenced by initcon(), operator$\ast$(), operator+=(), operator/(), and operator=().
+
+\index{state@{state}!g@{g}}
+\index{g@{g}!state@{state}}
+\subsubsection[{g}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state} state\-::g\hspace{0.3cm}{\ttfamily [static]}}\label{classstate_a9cbd418203ac7d99a1d81fd5281f4c27}
+
+
+Temporary state vector used to prevent memory overflow. 
+
+\index{state@{state}!statesize@{statesize}}
+\index{statesize@{statesize}!state@{state}}
+\subsubsection[{statesize}]{\setlength{\rightskip}{0pt plus 5cm}int state\-::statesize\hspace{0.3cm}{\ttfamily [static]}}\label{classstate_a5360a31f6ea76abdb3308ef67c0fd5c7}
+
+
+Size of the state vector. 
+
+
+
+Referenced by clear(), cranknicolsonwp(), eulerforw(), flux2proc(), fluxproc(), get(), getslope(), initcon(), main(), operator$\ast$(), operator+=(), operator/(), operator=(), rk3(), sourceproc(), and state().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf state.\-h}\item 
+{\bf state.\-cpp}\end{DoxyCompactItemize}

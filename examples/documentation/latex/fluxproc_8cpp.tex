@@ -1,0 +1,42 @@
+\section{fluxproc.\-cpp File Reference}
+\label{fluxproc_8cpp}\index{fluxproc.\-cpp@{fluxproc.\-cpp}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include \char`\"{}state.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}element.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flux.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fluxproc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}enumtypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}updatenodes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}physpara.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf fluxproc} (vector$<$ {\bf node} $>$ \&Nodes, vector$<$ {\bf element} $>$ \&Elements, int bcl, int bcr, {\bf testtypedescr} testtype, {\bf fluxbase} $\ast$fluxtype, double t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fluxproc.\-cpp@{fluxproc.\-cpp}!fluxproc@{fluxproc}}
+\index{fluxproc@{fluxproc}!fluxproc.cpp@{fluxproc.\-cpp}}
+\subsubsection[{fluxproc}]{\setlength{\rightskip}{0pt plus 5cm}int fluxproc (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf node} $>$ \&}]{Nodes, }
+\item[{vector$<$ {\bf element} $>$ \&}]{Elements, }
+\item[{int}]{bcl, }
+\item[{int}]{bcr, }
+\item[{{\bf testtypedescr}}]{testtype, }
+\item[{{\bf fluxbase} $\ast$}]{fluxtype, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)}\label{fluxproc_8cpp_ac8d8091a0a5c8a0b3200e7121bcd4e1e}
+
+
+References dissipation\-\_\-alpha, dissipation\-\_\-beta, dissipation\-\_\-const, fluxbase\-::eval(), fluxbase\-::eval\-\_\-l(), fluxbase\-::eval\-\_\-r(), state\-::statesize, element\-::systemsize1, and updatenodesq().
+
+
+
+Referenced by cranknicolsonwp(), eulerforw(), and rk3().
+

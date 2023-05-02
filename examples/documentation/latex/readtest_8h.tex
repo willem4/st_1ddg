@@ -1,0 +1,84 @@
+\section{readtest.\-h File Reference}
+\label{readtest_8h}\index{readtest.\-h@{readtest.\-h}}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}enumtypes.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf readtest} ({\bf testtypedescr} \&testtype, {\bf timeintmethod} \&timeint, string \&meshname, double \&C\-F\-L, double \&it, double \&et, int \&deg)
+\begin{DoxyCompactList}\small\item\em Function for reading the test. \end{DoxyCompactList}\item 
+int {\bf writetest} ({\bf testtypedescr} \&testtype, {\bf timeintmethod} \&timeint, string \&meshname, double \&C\-F\-L, double \&it, double \&et, int \&deg)
+\begin{DoxyCompactList}\small\item\em Function for writing the test (not used any longer). \end{DoxyCompactList}\item 
+int {\bf readtest2} ({\bf testtypedescr} \&testtype, {\bf timeintmethod} \&timeint, string \&meshname, double \&C\-F\-L, double \&it, double \&et, int \&deg, string testname)
+\begin{DoxyCompactList}\small\item\em Function for reading the test with filename. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{readtest.\-h@{readtest.\-h}!readtest@{readtest}}
+\index{readtest@{readtest}!readtest.h@{readtest.\-h}}
+\subsubsection[{readtest}]{\setlength{\rightskip}{0pt plus 5cm}int readtest (
+\begin{DoxyParamCaption}
+\item[{{\bf testtypedescr} \&}]{testtype, }
+\item[{{\bf timeintmethod} \&}]{timeint, }
+\item[{string \&}]{meshname, }
+\item[{double \&}]{C\-F\-L, }
+\item[{double \&}]{it, }
+\item[{double \&}]{et, }
+\item[{int \&}]{deg}
+\end{DoxyParamCaption}
+)}\label{readtest_8h_a22df63301adc06dec0a3b61c8ca70a53}
+
+
+Function for reading the test. 
+
+
+
+References readtest2(), and writetest().
+
+\index{readtest.\-h@{readtest.\-h}!readtest2@{readtest2}}
+\index{readtest2@{readtest2}!readtest.h@{readtest.\-h}}
+\subsubsection[{readtest2}]{\setlength{\rightskip}{0pt plus 5cm}int readtest2 (
+\begin{DoxyParamCaption}
+\item[{{\bf testtypedescr} \&}]{testtype, }
+\item[{{\bf timeintmethod} \&}]{timeint, }
+\item[{string \&}]{meshname, }
+\item[{double \&}]{C\-F\-L, }
+\item[{double \&}]{it, }
+\item[{double \&}]{et, }
+\item[{int \&}]{deg, }
+\item[{string}]{testname}
+\end{DoxyParamCaption}
+)}\label{readtest_8h_ab8618263dd35101a61219e3f7304bf7d}
+
+
+Function for reading the test with filename. 
+
+
+
+References Advection, Burgers, Burgers\-Diffusive, Crank\-Nicolson\-With\-Predictor, Decoupled\-Grass\-Sediment\-Only, Euler\-Forward, H\-L\-L\-Grass, L\-F\-Grass, L\-F\-Grass\-Momentum, L\-F\-Grass\-Momentum\-Diffusion, Runge\-Kutta3, Sediment\-Transport, Suspended\-Sediment, S\-W\-E\-Burgers, S\-W\-E\-Continuous\-Topography, S\-W\-E\-Discontinuous\-Topography, S\-W\-E\-Flow\-Over\-Isolated\-Continuous\-Ridge\-I, S\-W\-E\-Flow\-Over\-Isolated\-Continuous\-Ridge\-I\-V, S\-W\-E\-Flow\-Over\-Isolated\-Discontinuous\-Ridge\-I, S\-W\-E\-Flow\-Over\-Isolated\-Discontinuous\-Ridge\-I\-V, S\-W\-E\-Flow\-Over\-Siny\-Bed\-I, S\-W\-E\-Linear\-Wave\-Solution, S\-W\-E\-Riemann\-Problem\-Left\-Rarefaction\-Right\-Rarefaction, S\-W\-E\-Riemann\-Problem\-Left\-Rarefaction\-Right\-Shock, S\-W\-E\-Riemann\-Problem\-Left\-Shock\-Right\-Rarefaction, and S\-W\-E\-Riemann\-Problem\-Left\-Shock\-Right\-Shock.
+
+
+
+Referenced by main(), and readtest().
+
+\index{readtest.\-h@{readtest.\-h}!writetest@{writetest}}
+\index{writetest@{writetest}!readtest.h@{readtest.\-h}}
+\subsubsection[{writetest}]{\setlength{\rightskip}{0pt plus 5cm}int writetest (
+\begin{DoxyParamCaption}
+\item[{{\bf testtypedescr} \&}]{testtype, }
+\item[{{\bf timeintmethod} \&}]{timeint, }
+\item[{string \&}]{meshname, }
+\item[{double \&}]{C\-F\-L, }
+\item[{double \&}]{it, }
+\item[{double \&}]{et, }
+\item[{int \&}]{deg}
+\end{DoxyParamCaption}
+)}\label{readtest_8h_a6fa151cbbda5c7ae7a233350b4738830}
+
+
+Function for writing the test (not used any longer). 
+
+
+
+Referenced by readtest().
+
