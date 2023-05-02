@@ -24,7 +24,7 @@ void topography::eval(double * F2, double * uL, double * uLslope, double * qL){
   F2[1] = -g*hL*hbLslope;
 }  
 
-void exchange::eval(double * F2, double * uL, double * uLslope, double * qL){ 
+void exchangesusp::eval(double * F2, double * uL, double * uLslope, double * qL){ 
   int j;  
   double hL,mL,uuL,hbL,qqL,hLslope,mLslope,hbLslope;
   double g = gravity_const;  /// * H_0 / (U_0)^2;

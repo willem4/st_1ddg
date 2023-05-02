@@ -48,6 +48,7 @@ double getdt(vector <element> Elements, testtypedescr testtype)
   double h;
   double m;
   double q;
+  double w;
   double g = gravity_const;
   double A = Grass_const;
   switch ( testtype )
@@ -91,23 +92,46 @@ double getdt(vector <element> Elements, testtypedescr testtype)
     case SWEFlowOverIsolatedDiscontinuousRidgeIV:
     case SWEFlowOverSinyBedI:
       for (i = 0; i < Elements.size(); i++){
-	if (Elements[i].length < minlength){
-	  minlength = Elements[i].length;
-	}
+     	if (Elements[i].length < minlength){
+     	  minlength = Elements[i].length;
+     	}
       }
       for (i = 0; i < Elements.size(); i++){
-	h = Elements[i].U[0].get(-1.0);
-	m = Elements[i].U[1].get(-1.0);
-	u = m/h;
-	if (sqrt(u*u+g*h)>maxspeed) {
-	  maxspeed = sqrt(u*u+g*h);
-	}
-	h = Elements[i].U[0].get(1.0);
-	m = Elements[i].U[1].get(1.0);
-	u = m/h;
-	if (sqrt(u*u+g*h)>maxspeed) {
-	  maxspeed = sqrt(u*u+g*h);
-	}
+     	h = Elements[i].U[0].get(-1.0);
+     	m = Elements[i].U[1].get(-1.0);
+     	u = m/h;
+     	if (sqrt(u*u+g*h)>maxspeed) {
+          maxspeed = sqrt(u*u+g*h);
+        }
+     	h = Elements[i].U[0].get(1.0);
+     	m = Elements[i].U[1].get(1.0);
+     	u = m/h;
+     	if (sqrt(u*u+g*h)>maxspeed) {
+     	  maxspeed = sqrt(u*u+g*h);
+     	}
+      }
+      break;
+    case SWERiemannProblemLeftRarefactionRightShockWidthChange: 
+      for (i = 0; i < Elements.size(); i++){
+     	if (Elements[i].length < minlength){
+     	  minlength = Elements[i].length;
+     	}
+      }
+      for (i = 0; i < Elements.size(); i++){
+     	h = Elements[i].U[0].get(-1.0);
+     	m = Elements[i].U[1].get(-1.0);
+     	w = Elements[i].U[2].get(-1.0);
+     	u = m/h/w;
+     	if (sqrt(u*u+g*h)>maxspeed) {
+          maxspeed = sqrt(u*u+g*h);
+        }
+     	h = Elements[i].U[0].get(1.0);
+     	m = Elements[i].U[1].get(1.0);
+     	w = Elements[i].U[2].get(1.0);
+     	u = m/h/w;
+     	if (sqrt(u*u+g*h)>maxspeed) {
+     	  maxspeed = sqrt(u*u+g*h);
+     	}
       }
       break;
     case BurgersDiffusive:
@@ -241,6 +265,7 @@ int main(int argc, char * argv[])
     case HLLGrass:
     case LFGrass:
     case LFGrassMomentum:
+    case SWERiemannProblemLeftRarefactionRightShockWidthChange:
       element::systemsize1 = 3;  //systems of the form u_t + f(u)_x = s
       element::systemsize2 = 0;  //systems of the form u + g(u)_x = s 
       break;
@@ -259,9 +284,10 @@ int main(int argc, char * argv[])
     }
 
   //Choose the flux, source and flux2 to be used.
-  fluxbase * fluxtype;
-  sourcebase * sourcetype;
-  flux2base * flux2type;
+  fluxbase * fluxtype = NULL;
+  sourcebase * sourcetype = NULL;
+  flux2base * flux2type = NULL;
+
   switch ( testtype )
     {
     case Advection: 
@@ -284,6 +310,12 @@ int main(int argc, char * argv[])
     case SWERiemannProblemLeftRarefactionRightRarefaction:
       cout << "Program for Shallow Water Equations - HLLC flux\n";
       fluxtype = new swehllc;
+      sourcetype = new nosource;
+      flux2type = new noflux2;
+      break;
+    case SWERiemannProblemLeftRarefactionRightShockWidthChange:
+      cout << "Program for Shallow Water Equations Including Width - HLLC flux\n";
+      fluxtype = new swehllcwidth;
       sourcetype = new nosource;
       flux2type = new noflux2;
       break;
@@ -341,7 +373,7 @@ int main(int argc, char * argv[])
       break;
     case SuspendedSediment:
       fluxtype = new suspendedsediment;
-      sourcetype = new exchange;      
+      sourcetype = new exchangesusp;      
       flux2type = new noflux2;
       cout << "Program for Suspended Sediment \n";
       break;

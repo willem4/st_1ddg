@@ -27,19 +27,19 @@ double burgers::eval(double* F, double* uL, double* uR, double* qL, double* qR){
   int j;
   double ws;
   for (j=0;j<element::systemsize1;j++){
-    if (uL[j]<0 & uR[j]<0){
+    if ((uL[j]<0) & (uR[j]<0)){
       F[j]=0.5*uR[j]*uR[j];
       ws = abs(uR[j]);
     }
-    if (uL[j]>0 & uR[j]>0){
+    if ((uL[j]>0) & (uR[j]>0)){
       F[j]=0.5*uL[j]*uL[j];
       ws = abs(uL[j]);
     }
-    if (uL[j]<0 & uR[j]>0){
+    if ((uL[j]<0) & (uR[j]>0)){
       F[j]=0;
       ws = 0;
     }
-    if (uL[j]>0 & uR[j]<0){
+    if ((uL[j]>0) & (uR[j]<0)){
       F[j]=0.25*(uL[j]*uL[j]+uR[j]*uR[j]);
       ws = abs(0.5*(uL[j]+uR[j]));
     }
@@ -52,18 +52,18 @@ double burgersdiffusion::eval(double* F, double* uL, double* uR, double* qL, dou
   int j;
   double ws;
   for (j=0;j<element::systemsize1;j++){
-    if (uL[j]<0 & uR[j]<0){
+    if ((uL[j]<0) & (uR[j]<0)){
       F[j]=0.5*uR[j]*uR[j];
       ws = abs(uR[j]);
     }
-    if (uL[j]>0 & uR[j]>0){
+    if ((uL[j]>0) & (uR[j]>0)){
       F[j]=0.5*uL[j]*uL[j];
       ws = abs(uL[j]);
     }
-    if (uL[j]<0 & uR[j]>0){
+    if ((uL[j]<0) & (uR[j]>0)){
       F[j]=0;
     }
-    if (uL[j]>0 & uR[j]<0){
+    if ((uL[j]>0) & (uR[j]<0)){
       F[j]=0.25*(uL[j]*uL[j]+uR[j]*uR[j]);
       ws = abs(0.5*(uL[j]+uR[j]));
     }
@@ -139,6 +139,68 @@ double swehllc::eval(double* F, double* uL, double* uR, double* qL, double* qR){
   }
   return ws;
 }  
+
+double swehllcwidth::eval(double* F, double* uL, double* uR, double* qL, double* qR){
+  //HLLC Flux for the shallow water equations 
+  // including upwind flux for Grass bed updating equation. 
+  int j; 
+  double hL,mL,hR,mR,uuL,uuR,SL,SR,SM,hM,mM,hbL,hbR,uu,wL,wR,wM;
+  double g = gravity_const; // scaled = H_0 / (U_0)^2 g;
+  for (j = 0; j < element::systemsize1; j++){  
+    F[j]=0.0;
+  }
+  hL=uL[0];   
+  mL=uL[1];   
+  uuL=mL/hL;
+  hR=uR[0];
+  mR=uR[1];
+  uuR=mR/hR;
+  if (uuL-( sqrt(g*hL))<uuR-(sqrt(g*hR)))
+    {
+      SL=uuL-sqrt(g*hL);
+    }
+  else 
+    {
+      SL=uuR-sqrt(g*hR);
+    }
+  if (uuL+sqrt(g*hL)>uuR+sqrt(g*hR))
+    {
+      SR=uuL+sqrt(g*hL);
+    }
+  else 
+    {
+      SR=uuR+sqrt(g*hR);
+    }   
+  double ws = abs(SL); 
+  if (abs(SR) > ws){
+    ws = abs(SR);
+  }
+  SM=(0.5*g*hL*hL-0.5*g*hR*hR-uuL*hL*(SL-uuL)+uuR*hR*(SR-uuR))/(hR*(SR-uuR)-hL*(SL-uuL));
+  if (SL > 0){
+    F[0] = mL;
+    F[1] = mL*mL/hL+0.5*g*hL*hL;
+  }
+  if (SR < 0){
+      F[0] = mR;
+      F[1] = mR*mR/hR+0.5*g*hR*hR;
+    }
+  if (SL <= 0 and SM > 0){
+      hM = hL*(SL-uuL)/(SL-SM);         //sqrt(2/g*(0.5*g*hL*hL+hL*(SL-uuL)*(SM-uuL)));
+      mM = SM*hM;
+      F[0] = mL+SL*(hM-hL);
+      F[1] = mL*mL/hL+0.5*g*hL*hL+SL*(mM-mL);
+    }
+  if (SM <= 0 and SR >= 0){
+      hM = hR*(SR-uuR)/(SR-SM); //sqrt(2.0/g*(0.5*g*hR*hR+hR*(SR-uuR)*(SM-uuR)));
+      mM = SM*hM;
+      F[0] = mR+SR*(hM-hR);
+      F[1] = mR*mR/hR+0.5*g*hR*hR+SR*(mM-mR);
+    }
+  for (j = 2; j < element::systemsize1; j++){
+    F[j]=0;
+  }
+  return ws;
+}
 
 double swehllctopography::eval(double* F, double* uL, double* uR, double* qL, double* qR){
   //HLLC Flux for the shallow water equations 
@@ -273,7 +335,7 @@ double sedimenttransport::eval(double* F, double* uL, double* uR, double* qL, do
   double g = gravity_const; // scaled = H_0 / (U_0)^2 g;
   double A = Grass_const;
   double B = Grass_exponent;
-  double ws;
+  double ws = 0.0;
   for (j = 0; j < element::systemsize1; j++){  
     F[j]=0.0;
   }

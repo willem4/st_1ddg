@@ -119,6 +119,6 @@ int flux2proc(vector<node> &Nodes, vector<element>& Elements, int bcl, int bcr, 
   delete [] F;
   delete [] F2;
   delete [] F1;
-  
+  return 0;
 }
 

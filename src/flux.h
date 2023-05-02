@@ -57,6 +57,15 @@ public:
   void eval_r(double *, double *, double *, double *, double *){}
 };
 
+//! Derived fluxbase class for Shallow Water equations using HLLC with no topography.
+class swehllcwidth: public fluxbase {
+public:
+  //! Evaluation of the HLLC flux.
+  double eval(double *, double *, double *, double *, double *);
+  void eval_l(double *, double *, double *, double *, double *){}
+  void eval_r(double *, double *, double *, double *, double *){}
+};
+
 //! Derived fluxbase class for Shallow Water equations using HLLC with discontinuous topography.
 class swehllctopography: public fluxbase {
 public:

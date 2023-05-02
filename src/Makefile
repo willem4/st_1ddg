@@ -1,10 +1,17 @@
 OBJECTS = st_1ddg.o node.o state.o element.o enumtypes.o readtest.o readmesh.o initcon.o testfcn.o output.o eulerforw.o rk3.o cranknicolsonwp.o fluxproc.o flux2proc.o flux.o flux2.o physpara.o sourceproc.o source.o updatenodes.o exactriemann.o	
 
 st_1ddg: $(OBJECTS)
-	c++ $(OBJECTS) -lm  -o st_1ddg
+	mkdir -p ../bin/lnx64
+	c++ $(OBJECTS) -lm  -o ../bin/lnx64/st_1ddg
 
 clean:
 	rm $(OBJECTS)
+	rm ../bin/lnx64/st_1ddg
+	rmdir ../bin/lnx64
+	rmdir ../bin
+
+docs:
+	doxygen
 
 node.o: node.h
 state.o: state.h

@@ -35,5 +35,6 @@ int sourceproc(vector<node> Nodes, vector<element>& Elements, sourcebase * sourc
   
   delete [] F1;
   delete [] F2;
+  return 0;
 }
 

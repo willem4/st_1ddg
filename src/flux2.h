@@ -14,20 +14,22 @@ public:
 class noflux2: public flux2base {
 public:
   //! Evaluation which does nothing.
-  double eval(double *, double *, double *){}
+	double eval(double*, double*, double*) { 
+		return 0.0; 
+	};
 };
 
 //! LDG diffusion flux class used in comination with Burgers' equation.
 class diffusion: public flux2base {
 public:
-  //! Evaluates the flux for the LDG variables for the difussion.
+  //! Evaluates the flux for the LDG variables for the diffusion.
   double eval(double *, double *, double *);
 };
 
 //! LDG diffusion flux class used in comination with Grass Bed Updating equation.
 class sedimentdiffusion: public flux2base {
  public:
-  //! Evaluates the flux for the LDG variables for the sedimentdifussion.
+  //! Evaluates the flux for the LDG variables for the sediment diffusion.
   double eval(double *, double *, double *);
 };
 

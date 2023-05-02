@@ -113,5 +113,6 @@ int rk3(double &dt, vector<node> &Nodes, vector<element>& Elements, int bcl, int
     }
   }
   //   cout << Elements[2].U1[0].coefficient[0] << ": check after flux\n";
+  return 0;
 }
 

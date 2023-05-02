@@ -94,6 +94,7 @@ int cranknicolsonwp(double &dt, vector<node> &Nodes, vector<element> &Elements, 
     Elements[i].StabOp.clear();
     Elements[i].StabOp_old.clear();
   }
+  return 0;
 }
     
   

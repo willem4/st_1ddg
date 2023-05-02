@@ -35,4 +35,5 @@ int output(vector<node> Nodes, vector<element> Elements, string filename)
     }
   }
   OutFile.close();
+  return 0;
 }

@@ -25,7 +25,7 @@ public:
 };
 
 //! Derived Exchange Class from SourceBase.
-class exchange: public sourcebase {
+class exchangesusp: public sourcebase {
 public:
   //! Evaluation of the Source in the Shallow Water Equations and Bed Sediment and Suspended Sediment Exchange.
   void eval(double *, double *, double *, double *);

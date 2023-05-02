@@ -57,6 +57,7 @@ int readmesh(string meshname, vector <element> &Elements, vector <node> &Nodes, 
       cout << "[readmesh:] Invalid Boundary conditions \n";
     }
   InFile.close();
+  return 0;
 }
   
   

@@ -59,6 +59,7 @@ int eulerforw(double &dt, vector<node> &Nodes, vector<element> &Elements, int bc
     }
     Elements[i].StabOp.clear();
   }
+  return 0;
 }
     
   

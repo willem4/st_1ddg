@@ -48,4 +48,5 @@ int initcon(vector<node> Nodes, vector<element>& Elements, testtypedescr testtyp
     }
     Elements[i].Kriv = 1.0;
   }
+  return 0;
 }

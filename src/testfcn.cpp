@@ -84,7 +84,22 @@ double testfcn(testtypedescr testtype, int j, double x, double t)
   case SWERiemannProblemLeftRarefactionRightRarefaction:
     f = exactriemann(2, -1, 2, 1, 0.5, x, t, j);
     break;
-  case SWEContinuousTopography:   case SWEDiscontinuousTopography: 
+  case SWERiemannProblemLeftRarefactionRightShockWidthChange:
+    if (j < 2){
+      f = exactriemann(2.0, 0.0, 1.0, 0.0, 0.5, x, t, j);
+    }
+    else{
+      f = 1.0;
+      //if (x<=0.5){
+      //  f = 2;
+      //}
+      //else{
+      //  f = 1;
+      //}
+    }
+    break;
+  case SWEContinuousTopography:   
+  case SWEDiscontinuousTopography: 
     //Rest = Rest case.
     switch (j){
     case 0:

@@ -59,6 +59,8 @@ int readtest2(testtypedescr &testtype, timeintmethod &timeint, string &meshname,
       break;
     case 22 : testtype = SWEFlowOverSinyBedI;
       break;
+    case 23 : testtype = SWERiemannProblemLeftRarefactionRightShockWidthChange;
+      break;
     }
   InFile >> timeno;
   switch (timeno)
@@ -76,6 +78,7 @@ int readtest2(testtypedescr &testtype, timeintmethod &timeint, string &meshname,
   InFile >> et;
   InFile >> deg;
   InFile.close();
+  return 0;
 }
 
 int writetest(testtypedescr &testtype, timeintmethod &timeint, string &meshname, double &CFL, double &it, double &et, int &deg)
@@ -89,6 +92,7 @@ int writetest(testtypedescr &testtype, timeintmethod &timeint, string &meshname,
   OutFile << et;
   OutFile << deg;
   OutFile.close();
+  return 0;
 }
 
 int readtest(testtypedescr &testtype, timeintmethod &timeint, string &meshname, double &CFL, double &it, double &et, int &deg)
@@ -98,6 +102,7 @@ int readtest(testtypedescr &testtype, timeintmethod &timeint, string &meshname, 
   cin  >> testfilename;
   readtest2(testtype,timeint,meshname,CFL,it,et,deg,testfilename.c_str());
   writetest(testtype,timeint,meshname,CFL,it,et,deg);
+  return 0;
 }
 
 
