@@ -6,6 +6,4 @@
 	with Application to the Paran\'a River},
   school = {University of Twente},
   year = {2005},
-  owner = {victorchavarri},
-  timestamp = {2016.09.14}
 }
